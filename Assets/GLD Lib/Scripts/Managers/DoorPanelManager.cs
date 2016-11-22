@@ -26,7 +26,7 @@ public class DoorPanelManager : MonoBehaviour {
 		homePos = transform.localPosition;
 		homeRot = transform.root.localRotation;
 		status = DoorPanelStatus.CLOSE;
-		pending = DoorPanelStatus.MOVING;
+		pending = DoorPanelStatus.CLOSE;
 	}
 
 	void Update() {
@@ -58,7 +58,7 @@ public class DoorPanelManager : MonoBehaviour {
 	public void Open(DoorMode dm, float t) {
 		if (status != DoorPanelStatus.OPEN && pending != DoorPanelStatus.OPEN) {
 			startPos = transform.localPosition;
-			startRot = transform.localRotation;
+			startRot = transform.root.localRotation;
 			switch (dm) {
 			case DoorMode.SLIDE_UP:
 				targetPos = homePos + Vector3.up;

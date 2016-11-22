@@ -5,7 +5,7 @@ using System.Collections;
 public class FloorBuilder : EditorWindow {
 
 	static private int pWidth = 250;
-	static private int pHeight = 100;
+	static private int pHeight = 75;
 	static private int eSize = 110;
 	static private int hSpan = 10;
 	static private int vSpan = 1;

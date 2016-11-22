@@ -9,7 +9,6 @@ public class LinearFireGenerator : MonoBehaviour {
 	public void Fire(Transform t) {
 		if (ammo != null) {
 			Transform bullet = (Transform) Instantiate (ammo, transform.position, transform.parent.rotation);
-			Debug.Log (bullet);
 			Vector3 aim;
 			if (t == null)
 				aim = transform.forward;

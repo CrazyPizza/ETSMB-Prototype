@@ -18,6 +18,7 @@ public class DoorManager : _VigilantBehaviour {
 
 	private DoorPanelManager pm;
 	private float timeout = 0;
+	private bool ignorePresence = false;
 
 	void Reset() {
 		sensingRange = 3f;
@@ -36,11 +37,14 @@ public class DoorManager : _VigilantBehaviour {
 	}
 
 	private void Someone(Transform t) {
-		if (!openOnClick) pm.Open (openingMode, openingTime);
+		if (!openOnClick && !ignorePresence) pm.Open (openingMode, openingTime);
 	}
 
 	private void Noone(Transform t) {
-		if (!openOnClick) pm.Close (closingTime);
+		if (!openOnClick) {
+			pm.Close (closingTime);
+			ignorePresence = false;
+		}
 	}
 
 	private void AllUpdates(Transform t) {
@@ -56,6 +60,7 @@ public class DoorManager : _VigilantBehaviour {
 				active = false;
 			else if (stayOpenFor > 0f) {
 				timeout = Time.time + stayOpenFor;
+				ignorePresence = true;
 			}
 		} else if (pm.status == DoorPanelStatus.CLOSE) {
 			if (keepShutAfter)

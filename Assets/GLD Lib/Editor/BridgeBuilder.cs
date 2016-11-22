@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class BridgeBuilder : EditorWindow {
 
 	static float width = 2f;
+	private float rHeight = 5f;
 
 	// find sample points around the edge of a platform/transform
 	private static Vector3[] SamplePoints(Transform t) {
@@ -122,7 +123,7 @@ public class BridgeBuilder : EditorWindow {
 	}
 
 	static private int pWidth = 250;
-	static private int pHeight = 50;
+	static private int pHeight = 70;
 	static private int eSize = 110;
 	static private int hSpan = 10;
 	static private int vSpan = 1;
@@ -144,5 +145,45 @@ public class BridgeBuilder : EditorWindow {
 		width = EditorGUILayout.FloatField ("Width", width, GUILayout.Width(eSize));
 		GUILayout.Space (hSpan);
 		EditorGUILayout.EndHorizontal ();
+
+		GUILayout.Space (vSpan);
+
+		EditorGUILayout.BeginHorizontal ();
+		GUILayout.Space (hSpan);
+		if (GUILayout.Button ("Railings", GUILayout.Width(eSize))) {
+			Transform[] tt = GLDTools.GetSelection();
+			foreach (Transform t in tt) {
+				Debug.Log (t.tag);
+				if (t.tag == "Bridge") {
+					Debug.Log ("A");
+					Quaternion q = t.rotation;
+					t.rotation = Quaternion.identity;
+					Vector3 sz = t.localScale;
+
+					//GameObject n = GLDTools.NoCloneName ((GameObject) GameObject.Instantiate (Resources.Load ("Environment/Railing"), t.position + new Vector3(0f, rHeight / 2f, sz.z / 2f), Quaternion.identity));
+					//GameObject s = GLDTools.NoCloneName ((GameObject) GameObject.Instantiate (Resources.Load ("Environment/Railing"), t.position + new Vector3(0f, rHeight / 2f, -sz.z / 2f), Quaternion.identity));
+					GameObject e = GLDTools.NoCloneName ((GameObject) GameObject.Instantiate (Resources.Load ("Environment/Railing"), t.position + new Vector3(sz.x / 2f, rHeight / 2f, 0f), Quaternion.identity));
+					GameObject w = GLDTools.NoCloneName ((GameObject) GameObject.Instantiate (Resources.Load ("Environment/Railing"), t.position + new Vector3(-sz.x / 2f, rHeight / 2f, 0f), Quaternion.identity));
+
+					//n.transform.localScale = new Vector3 (sz.x, rHeight, 0.02f);
+					//s.transform.localScale = new Vector3 (sz.x, rHeight, 0.02f);
+					e.transform.localScale = new Vector3 (0.02f, rHeight, sz.z);
+					w.transform.localScale = new Vector3 (0.02f, rHeight, sz.z);
+
+					//n.transform.parent = t;
+					//s.transform.parent = t;
+					e.transform.parent = t;
+					w.transform.parent = t;
+
+					t.rotation = q;
+				}
+			}
+		}
+		GUILayout.Space (hSpan);
+		EditorGUIUtility.labelWidth = eSize / 2f;
+		rHeight = EditorGUILayout.FloatField ("Height", rHeight, GUILayout.Width(eSize));
+		GUILayout.Space (hSpan);
+		EditorGUILayout.EndHorizontal ();
+
 	}
 }

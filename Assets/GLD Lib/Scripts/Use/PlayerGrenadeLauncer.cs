@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerGrenadeLauncer : MonoBehaviour {
 
 	public bool active = true;
-	public KeyCode key = KeyCode.Q;
+	public KeyCode key = KeyCode.Backslash;
 
 	private ParabolicFireGenerator pfg = null;
 
@@ -14,7 +14,6 @@ public class PlayerGrenadeLauncer : MonoBehaviour {
 	
 	void Update () {
 		if (pfg && active && Input.GetKeyDown (key)) {
-            Debug.Log("Sparato");
 			pfg.Fire (null);
 		}
 	}

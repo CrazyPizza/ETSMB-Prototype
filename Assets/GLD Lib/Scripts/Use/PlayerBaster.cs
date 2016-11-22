@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerBaster : MonoBehaviour {
 
 	public bool active = true;
-	public KeyCode key = KeyCode.Q;
+	public KeyCode key = KeyCode.Return;
 
 	private LinearFireGenerator lfg = null;
 

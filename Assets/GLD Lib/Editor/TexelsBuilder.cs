@@ -8,15 +8,13 @@ enum CurveType { Up, Down };
 
 public class TexelsBuilder : EditorWindow {
 
-	Transform reference = null;
-	Vector3 center = Vector3.zero;
 	float sx = 1f, sz = 1f, h = 1f;
 	int tx = 1, tz = 1;
 	bool curve = false;
 	CurveType updown = CurveType.Up;
 
 	static private int pWidth = 250;
-	static private int pHeight = 155;
+	static private int pHeight = 100;
 	static private int eSize = 110;
 	static private int hSpan = 10;
 	static private int vSpan = 1;
@@ -24,21 +22,6 @@ public class TexelsBuilder : EditorWindow {
 	void OnGUI() {
 
 		minSize = new Vector2 ((float)pWidth, (float)pHeight);
-
-		EditorGUILayout.BeginHorizontal ();
-		GUILayout.Space (hSpan);
-		center = EditorGUILayout.Vector3Field ("Center", center);
-		GUILayout.Space (hSpan);
-		EditorGUILayout.EndHorizontal ();
-
-		EditorGUILayout.BeginHorizontal ();
-		GUILayout.Space (hSpan);
-		EditorGUIUtility.labelWidth = (int)(eSize * 0.75);
-		reference = (Transform) EditorGUILayout.ObjectField ("Or Reference", reference, typeof(Transform), true);
-		GUILayout.Space (hSpan);
-		EditorGUILayout.EndHorizontal ();
-
-		GUILayout.Space (vSpan);
 
 		EditorGUILayout.BeginHorizontal ();
 		GUILayout.Space (hSpan);
@@ -83,7 +66,8 @@ public class TexelsBuilder : EditorWindow {
 		EditorGUILayout.BeginHorizontal ();
 		GUILayout.FlexibleSpace();
 		if (GUILayout.Button ("Build", GUILayout.Width(eSize))) {
-			Vector3 origin = reference != null ? reference.position : center;
+			Transform[] tt = GLDTools.GetSelection();
+			Vector3 origin = tt.Length == 1 ? tt[0].position : Vector3.zero;
 			Vector3 nc = origin - new Vector3 ((((float)tx) / 2f) * sx, 0f, (((float)tz) / 2f) * sz);
 			Vector3 sc = new Vector3 (sx, 0.02f, sz);
 			GameObject root = new GameObject ();
