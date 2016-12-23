@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -16,9 +17,27 @@ public class PlayerController : MonoBehaviour {
 	private Rigidbody rb;
 
 	void Start () {
+		
 		rb = GetComponent<Rigidbody> ();
+
+		//punto di respawn
+		if (GlobalControl.Instance.TransitionTarget != null)
+			gameObject.transform.position = GlobalControl.Instance.TransitionTarget.position;
+
+
+		if (GlobalControl.Instance.IsSceneBeingLoaded) {
+
+			PlayerState.Instance.localPlayerData = GlobalControl.Instance.LocalCopyOfData;
+
+			transform.position = new Vector3(
+				GlobalControl.Instance.LocalCopyOfData.PositionX,
+				GlobalControl.Instance.LocalCopyOfData.PositionY,
+				GlobalControl.Instance.LocalCopyOfData.PositionZ + 0.1f);
+
+			GlobalControl.Instance.IsSceneBeingLoaded = false;
+		}
 	}
-	
+
 	void Update () {
 		if (active) {
 			if (rb) {
@@ -34,6 +53,26 @@ public class PlayerController : MonoBehaviour {
 				else transform.Translate (jumpHeight * Vector3.up);
 			}
 
+			if (Input.GetKey(KeyCode.F5)) {
+
+				//PlayerState.Instance.localPlayerData.SceneID = 1;
+				PlayerState.Instance.localPlayerData.PositionX = transform.position.x;
+				PlayerState.Instance.localPlayerData.PositionY = transform.position.y;
+				PlayerState.Instance.localPlayerData.PositionZ = transform.position.z;
+
+				GlobalControl.Instance.SaveData();
+			}
+
+			if (Input.GetKey(KeyCode.F9)) {
+
+				GlobalControl.Instance.LoadData();
+				GlobalControl.Instance.IsSceneBeingLoaded = true;
+
+				int whichScene = GlobalControl.Instance.LocalCopyOfData.SceneID;
+
+				//Application.LoadLevel(whichScene);
+				SceneManager.LoadScene(whichScene);
+			}
 		}
 	}
 }
