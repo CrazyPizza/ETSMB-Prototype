@@ -27,6 +27,11 @@ public class GlobalControl : MonoBehaviour {
 	//Your player will be moved to that location after next scene is loaded.
 	public Transform TransitionTarget;
 
+	public PlayerStatistics LocalCopyOfData;
+	public bool IsSceneBeingLoaded = false;
+
+	public GameObject currentCheckpoint;
+
 	//Pseudo-singleton concept from Unity dev tutorial video:
 	void Awake() {
 		
@@ -38,14 +43,13 @@ public class GlobalControl : MonoBehaviour {
 		} else if (Instance != this) {
 			Destroy(gameObject);
 		}
-
 		if (TransitionTarget == null)
 			TransitionTarget = gameObject.transform;
+		Player = GetComponent<GameObject> ();
 
 	}
 
-	public PlayerStatistics LocalCopyOfData;
-	public bool IsSceneBeingLoaded = false;
+
 
 	public void SaveData() {
 
@@ -60,6 +64,8 @@ public class GlobalControl : MonoBehaviour {
 		formatter.Serialize(saveFile, LocalCopyOfData);
 
 		saveFile.Close();
+
+		Debug.Log ("Partita Salvata");
 	
 	}
 
@@ -73,4 +79,10 @@ public class GlobalControl : MonoBehaviour {
 		saveFile.Close();
 	
 	}
+
+	/*public void RespawnPlayer() {
+		gameObject.transform.position = currentCheckpoint.transform.position;
+	}*/
+
+
 }

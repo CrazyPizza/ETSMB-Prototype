@@ -37,12 +37,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692528, g: 0.4967872, b: 0.5750856, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -71,7 +71,8 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000001, guid: e7d6dc2d8d965e641a9606f20f4257ea,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -10417,7 +10418,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.27
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715, type: 2}
       propertyPath: m_LocalPosition.y
@@ -10425,7 +10426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.67
+      value: 10.68
       objectReference: {fileID: 0}
     - target: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715, type: 2}
       propertyPath: m_LocalRotation.x
@@ -10445,7 +10446,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000013132964476, guid: d798145a792b54a789af9bae43786715,
         type: 2}
@@ -11534,13 +11535,14 @@ MonoBehaviour:
     PositionX: 0
     PositionY: 0
     PositionZ: 0
+    NAME: Dass Jennir
     STR: 16
     CON: 15
     DEX: 14
     INT: 13
     WIS: 13
     CHR: 12
-    HP: 30
+    HP: 10
     AC: 5
     THAC0: 10
     Damage: 6
@@ -11551,6 +11553,18 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715,
     type: 2}
   m_PrefabInternal: {fileID: 812675764}
+--- !u!114 &909283318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 909283311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdd4a08286948a7bc5a225b574ef14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
 --- !u!1 &917442799
 GameObject:
   m_ObjectHideFlags: 0
@@ -17642,6 +17656,59 @@ Transform:
   - {fileID: 1589111991}
   m_Father: {fileID: 1081197891}
   m_RootOrder: 0
+--- !u!1 &1519176754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1519176756}
+  - 65: {fileID: 1519176755}
+  - 114: {fileID: 1519176757}
+  m_Layer: 0
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1519176755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519176754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1519176756
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519176754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: 0.01, z: 11.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!114 &1519176757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1519176754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ef1880c2c75284f959971e3635efcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!21 &1527734118
 Material:
   serializedVersion: 6
@@ -19728,7 +19795,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!21 &1723000707
 Material:
   serializedVersion: 6
@@ -21597,7 +21664,7 @@ GameObject:
   m_Layer: 0
   m_Name: RespawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -21608,7 +21675,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1932981582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.57, y: 0.01, z: 10.84}
+  m_LocalPosition: {x: 0.08, y: 0.1, z: 10.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -22250,13 +22317,14 @@ MonoBehaviour:
     PositionX: 0
     PositionY: 0
     PositionZ: 0
+    NAME: Dass Jennir
     STR: 16
     CON: 15
     DEX: 14
     INT: 13
     WIS: 13
     CHR: 12
-    HP: 30
+    HP: 10
     AC: 5
     THAC0: 10
     Damage: 6
@@ -22269,19 +22337,21 @@ MonoBehaviour:
     PositionX: 0
     PositionY: 0
     PositionZ: 0
+    NAME: Dass Jennir
     STR: 16
     CON: 15
     DEX: 14
     INT: 13
     WIS: 13
     CHR: 12
-    HP: 30
+    HP: 10
     AC: 5
     THAC0: 10
     Damage: 6
     Mutiplier: 1
     Bonus: 2
   IsSceneBeingLoaded: 0
+  currentCheckpoint: {fileID: 1519176754}
 --- !u!4 &2007332121
 Transform:
   m_ObjectHideFlags: 0
@@ -23575,7 +23645,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
