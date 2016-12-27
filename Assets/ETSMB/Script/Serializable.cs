@@ -18,7 +18,7 @@ public class PlayerStatistics {
 	public int WIS = 13;
 	public int CHR = 12;
 
-	public int HP = 10;
+	public int HP = 30;
 	public int AC = 5;
 	public int THAC0 = 10;
 	public int Damage = 6;

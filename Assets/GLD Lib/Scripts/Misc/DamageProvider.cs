@@ -5,6 +5,7 @@ public class DamageProvider : MonoBehaviour {
 
 	public bool active = true;
 
+	//numero di dadi
 	public int multiplicity = 1;
 	public int dice = 6;
 	public int bonus = 0;
