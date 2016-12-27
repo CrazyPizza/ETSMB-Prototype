@@ -30,13 +30,10 @@ public class GlobalControl : MonoBehaviour {
 	public PlayerStatistics LocalCopyOfData;
 	public bool IsSceneBeingLoaded = false;
 
-	public GameObject currentCheckpoint;
-
 	//Pseudo-singleton concept from Unity dev tutorial video:
 	void Awake() {
-		
-		//Application.targetFrameRate = 144;
 
+		Player = GetComponent<GameObject> ();
 		if (Instance == null) {
 			DontDestroyOnLoad(gameObject);
 			Instance = this;
@@ -45,12 +42,9 @@ public class GlobalControl : MonoBehaviour {
 		}
 		if (TransitionTarget == null)
 			TransitionTarget = gameObject.transform;
-		Player = GetComponent<GameObject> ();
-
+		
 	}
-
-
-
+		
 	public void SaveData() {
 
 		if (!Directory.Exists("Saves"))
@@ -79,10 +73,5 @@ public class GlobalControl : MonoBehaviour {
 		saveFile.Close();
 	
 	}
-
-	/*public void RespawnPlayer() {
-		gameObject.transform.position = currentCheckpoint.transform.position;
-	}*/
-
-
+		
 }

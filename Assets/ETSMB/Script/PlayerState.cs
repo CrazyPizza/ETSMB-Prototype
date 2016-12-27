@@ -24,9 +24,7 @@ public class PlayerState : MonoBehaviour {
 
 	//At start, load data from GlobalControl.
 	void Start () {
-
 		localPlayerData = GlobalControl.Instance.savedPlayerData;
-	
 	}
 
 	void Update() {}
