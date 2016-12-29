@@ -15,6 +15,7 @@ TagManager:
   - Bridge
   - NPC Ally
   - NPC Enemy
+  - PlayerBody
   layers:
   - Default
   - TransparentFX

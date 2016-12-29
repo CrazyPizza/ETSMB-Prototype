@@ -41,7 +41,7 @@ public class DamageReceiver : MonoBehaviour {
 			} else {
 
 				PlayerState.Instance.localPlayerData.HP -= i;
-				if (PlayerState.Instance.localPlayerData.HP <= 0) {
+				/*if (PlayerState.Instance.localPlayerData.HP <= 0) {
 
 					GlobalControl.Instance.LoadData();
 					GlobalControl.Instance.IsSceneBeingLoaded = true;
@@ -50,7 +50,7 @@ public class DamageReceiver : MonoBehaviour {
 			
 					//Application.LoadLevel(whichScene);
 					SceneManager.LoadScene(whichScene);
-				}
+				}*/
 			}
 		}
 	}
