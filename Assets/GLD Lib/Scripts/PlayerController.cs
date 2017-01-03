@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour {
 		//punto di respawn
 		if (GlobalControl.Instance.TransitionTarget != null)
 			gameObject.transform.position = GlobalControl.Instance.TransitionTarget.position;
-
-
+		
 		if (GlobalControl.Instance.IsSceneBeingLoaded) {
 
 			PlayerState.Instance.localPlayerData = GlobalControl.Instance.LocalCopyOfData;
@@ -55,27 +54,6 @@ public class PlayerController : MonoBehaviour {
 				if (rb) rb.MovePosition (transform.position + Vector3.up * jumpHeight);
 				else transform.Translate (jumpHeight * Vector3.up);
 			}
-
-			/*if (Input.GetKey(KeyCode.F5)) {
-
-				//PlayerState.Instance.localPlayerData.SceneID = 1;
-				PlayerState.Instance.localPlayerData.PositionX = transform.position.x;
-				PlayerState.Instance.localPlayerData.PositionY = transform.position.y;
-				PlayerState.Instance.localPlayerData.PositionZ = transform.position.z;
-
-				GlobalControl.Instance.SaveData();
-			}*/
-
-			/*if (Input.GetKey(KeyCode.F9)) {
-
-				GlobalControl.Instance.LoadData();
-				GlobalControl.Instance.IsSceneBeingLoaded = true;
-
-				int whichScene = GlobalControl.Instance.LocalCopyOfData.SceneID;
-
-				//Application.LoadLevel(whichScene);
-				SceneManager.LoadScene(whichScene);
-			}*/
 		}
 	}
 }

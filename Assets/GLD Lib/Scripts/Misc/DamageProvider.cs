@@ -9,8 +9,9 @@ public class DamageProvider : MonoBehaviour {
 	public int multiplicity = 1;
 	public int dice = 6;
 	public int bonus = 0;
+	public StatsInfo attacker;
 
-	public void ProvideDamage(Transform t) {
+	public void ProvideDamage(GameObject bullet, Transform t) {
 		if (active) {
 			DamageReceiver dr = t.root.GetComponentInChildren<DamageReceiver> ();
 			if (dr != null) {
@@ -18,9 +19,8 @@ public class DamageProvider : MonoBehaviour {
 				for (int i = 0; i < multiplicity; i += 1)
 					dmg += Random.Range (1, dice);
 				dmg += bonus;
-				dr.ReceiveDamage (dmg);
+				dr.ReceiveDamage (attacker, dmg);
 			}
 		}
 	}
-
 }

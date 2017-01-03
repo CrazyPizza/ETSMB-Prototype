@@ -10,7 +10,6 @@ public class CheckpointController : MonoBehaviour {
 	public GameObject player; //Riferimento al player
 	public int activeCheckpoint=0; //Public per un controllo veloce nell'inspector
 
-
 	void Start () {
 		//Prende le posizioni di partenza dei nemici, usate per resettarli nel loro punto originario
 		//NON ANCORA IMPLEMENTATO

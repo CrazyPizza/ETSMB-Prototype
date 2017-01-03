@@ -2466,7 +2466,8 @@ Prefab:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0
 --- !u!21 &190486230
@@ -3464,25 +3465,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 225508463}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actve: 1
-  STR: 9
-  CON: 9
-  DEX: 9
-  INT: 9
-  WIS: 9
-  CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
-  AC: 10
-  THAC0: 10
-  Damage: 8
-  Mutiplier: 1
+  NAME: Rogue 4
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 10
+  AC: 7
+  THAC0: 15
+  Damage: 6
+  Multiplier: 1
   Bonus: 0
-  showCallout: 1
 --- !u!4 &225508471 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029,
@@ -5820,7 +5818,8 @@ Prefab:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &475112254
@@ -6227,25 +6226,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 518833980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actve: 1
-  STR: 9
-  CON: 9
-  DEX: 9
-  INT: 9
-  WIS: 9
-  CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
-  AC: 10
-  THAC0: 10
-  Damage: 8
-  Mutiplier: 1
+  NAME: Rogue 2
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 10
+  AC: 7
+  THAC0: 15
+  Damage: 6
+  Multiplier: 1
   Bonus: 0
-  showCallout: 1
 --- !u!114 &518833982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10216,6 +10212,30 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029,
     type: 2}
   m_PrefabInternal: {fileID: 1489518280}
+--- !u!114 &777991149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777991144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NAME: Rogue 0
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 10
+  AC: 7
+  THAC0: 15
+  Damage: 6
+  Multiplier: 1
+  Bonus: 0
 --- !u!114 &777991152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10234,9 +10254,7 @@ MonoBehaviour:
   INT: 9
   WIS: 9
   CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
+  HP: 10
   AC: 10
   THAC0: 10
   Damage: 8
@@ -12037,7 +12055,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
 --- !u!21 &925171819
 Material:
   serializedVersion: 6
@@ -12815,7 +12833,7 @@ MonoBehaviour:
     AC: 5
     THAC0: 10
     Damage: 6
-    Mutiplier: 1
+    Multiplier: 1
     Bonus: 2
 --- !u!114 &943034059
 MonoBehaviour:
@@ -12847,6 +12865,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   key: 13
+--- !u!114 &943034066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 943034057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407806f99161e44a6bd2f557df7fa899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  multiplicity: 1
+  dice: 6
+  bonus: 0
 --- !u!21 &949440614
 Material:
   serializedVersion: 6
@@ -13631,25 +13664,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1034328377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actve: 1
-  STR: 9
-  CON: 9
-  DEX: 9
-  INT: 9
-  WIS: 9
-  CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
-  AC: 10
-  THAC0: 10
-  Damage: 8
-  Mutiplier: 1
+  NAME: Rogue 1
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 10
+  AC: 7
+  THAC0: 15
+  Damage: 6
+  Multiplier: 1
   Bonus: 0
-  showCallout: 1
 --- !u!114 &1034328379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15548,7 +15578,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1000012301109914, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
       propertyPath: m_Name
@@ -15558,7 +15588,63 @@ Prefab:
       propertyPath: m_TagString
       value: NPC Ally
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: STR
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CON
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: DEX
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: INT
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: WIS
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CHR
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: HP
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: AC
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: THAC0
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: Damage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: showCallout
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1266229097
@@ -15617,7 +15703,58 @@ Prefab:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: STR
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CON
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: DEX
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: INT
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: WIS
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CHR
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: AC
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: THAC0
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: Damage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: showCallout
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1270293789
@@ -16606,25 +16743,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368613368}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actve: 1
-  STR: 9
-  CON: 9
-  DEX: 9
-  INT: 9
-  WIS: 9
-  CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
-  AC: 10
-  THAC0: 10
-  Damage: 8
-  Mutiplier: 1
+  NAME: Rogue 3
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 10
+  AC: 7
+  THAC0: 15
+  Damage: 6
+  Multiplier: 1
   Bonus: 0
-  showCallout: 1
 --- !u!4 &1368613376 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029,
@@ -18062,7 +18196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1000012301109914, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
       propertyPath: m_Name
@@ -18081,7 +18215,8 @@ Prefab:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0
 --- !u!21 &1511778138
@@ -18422,7 +18557,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &1519176757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18646,7 +18781,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
 --- !u!21 &1543595182
 Material:
   serializedVersion: 6
@@ -21327,12 +21462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
---- !u!4 &1772980415 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029,
-    type: 2}
-  m_PrefabInternal: {fileID: 1256192857}
---- !u!114 &1772980417
+--- !u!114 &1772980413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -21340,25 +21470,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1772980409}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actve: 1
-  STR: 9
-  CON: 9
-  DEX: 9
-  INT: 9
-  WIS: 9
-  CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
-  AC: 10
-  THAC0: 10
-  Damage: 8
-  Mutiplier: 1
+  NAME: Mercenary
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 30
+  AC: 7
+  THAC0: 16
+  Damage: 6
+  Multiplier: 1
   Bonus: 0
-  showCallout: 1
+--- !u!4 &1772980415 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000010405774880, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+    type: 2}
+  m_PrefabInternal: {fileID: 1256192857}
 --- !u!21 &1782294065
 Material:
   serializedVersion: 6
@@ -21540,7 +21672,58 @@ Prefab:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: STR
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CON
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: DEX
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: INT
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: WIS
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CHR
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: AC
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: THAC0
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: Damage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: showCallout
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0
 --- !u!21 &1784039676
@@ -22942,25 +23125,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1972985229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+  m_Script: {fileID: 11500000, guid: a8bbf933d5926da48acf16d0dcf0b362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actve: 1
-  STR: 9
-  CON: 9
-  DEX: 9
-  INT: 9
-  WIS: 9
-  CHR: 9
-  HD: 3
-  HDBonus: 0
-  HP: 0
-  AC: 10
-  THAC0: 10
-  Damage: 8
-  Mutiplier: 1
+  NAME: Rogue 5
+  STR: 12
+  CON: 12
+  DEX: 14
+  INT: 11
+  WIS: 10
+  CHR: 10
+  HP: 10
+  AC: 7
+  THAC0: 15
+  Damage: 6
+  Multiplier: 1
   Bonus: 0
-  showCallout: 1
 --- !u!114 &1972985231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23320,7 +23500,7 @@ MonoBehaviour:
     AC: 5
     THAC0: 10
     Damage: 6
-    Mutiplier: 1
+    Multiplier: 1
     Bonus: 2
   Player: {fileID: 943034057}
   TransitionTarget: {fileID: 1519176756}
@@ -23340,7 +23520,7 @@ MonoBehaviour:
     AC: 5
     THAC0: 10
     Damage: 6
-    Mutiplier: 1
+    Multiplier: 1
     Bonus: 2
   IsSceneBeingLoaded: 0
 --- !u!4 &2007332121
@@ -24749,6 +24929,57 @@ Prefab:
       propertyPath: HP
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: STR
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CON
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: DEX
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: INT
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: WIS
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: CHR
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: AC
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: THAC0
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: Damage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029,
+        type: 2}
+      propertyPath: showCallout
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114000012999885842, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 04bf8cb5812b64c9e859b506b4cf9029, type: 2}
   m_IsPrefabParent: 0

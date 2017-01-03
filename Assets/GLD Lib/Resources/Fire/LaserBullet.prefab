@@ -25,7 +25,7 @@ GameObject:
   - 199: {fileID: 199000011648212908}
   - 114: {fileID: 114000011416880624}
   - 114: {fileID: 114000010825937370}
-  - 114: {fileID: 114000010208489660}
+  - 114: {fileID: 114000011935584280}
   m_Layer: 0
   m_Name: LaserBullet
   m_TagString: Untagged
@@ -61,21 +61,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!114 &114000010208489660
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013661959488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407806f99161e44a6bd2f557df7fa899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  multiplicity: 1
-  dice: 6
-  bonus: 0
 --- !u!114 &114000010825937370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -108,6 +93,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDistance: 250
   canBounce: 1
+--- !u!114 &114000011935584280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013661959488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407806f99161e44a6bd2f557df7fa899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  multiplicity: 1
+  dice: 6
+  bonus: 0
 --- !u!135 &135000013402412424
 SphereCollider:
   m_ObjectHideFlags: 1
