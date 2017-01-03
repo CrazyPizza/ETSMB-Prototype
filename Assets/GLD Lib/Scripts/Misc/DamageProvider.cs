@@ -11,7 +11,7 @@ public class DamageProvider : MonoBehaviour {
 	public int bonus = 0;
 	public StatsInfo attacker;
 
-	public void ProvideDamage(GameObject bullet, Transform t) {
+	public void ProvideDamage(Transform t) {
 		if (active) {
 			DamageReceiver dr = t.root.GetComponentInChildren<DamageReceiver> ();
 			if (dr != null) {

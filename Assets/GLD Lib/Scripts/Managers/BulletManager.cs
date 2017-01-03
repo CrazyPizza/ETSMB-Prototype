@@ -32,8 +32,7 @@ public class BulletManager : MonoBehaviour {
 		}
 		ExplosionGenerator eg = GetComponent<ExplosionGenerator> ();
 		if (eg != null) eg.Detonate (col.transform);
-		Debug.Log (dp.gameObject); //laserbullet
-		if (dp != null) dp.ProvideDamage (dp.gameObject, col.transform);
+		if (dp != null) dp.ProvideDamage (col.transform);
 		Destroy (gameObject);
 	}
 }
