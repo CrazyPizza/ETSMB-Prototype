@@ -11,6 +11,7 @@ public class ParabolicFireGenerator : MonoBehaviour {
 		if (ammo != null) {
 			Transform tt = (Transform) Instantiate (ammo, transform.position, transform.parent.rotation);
 			tt.GetComponent<Rigidbody> ().velocity = (Quaternion.Euler(-angle, 0f, 0f) * transform.parent.forward) * force;
+
 		}
 	}
 
