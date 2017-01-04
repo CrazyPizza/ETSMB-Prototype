@@ -17,9 +17,12 @@ public class DamageReceiver : MonoBehaviour {
 			Debug.Log ("Attacker: " + attacker);
 			Debug.Log ("Thac0: " + attacker.THAC0);
 			Debug.Log ("AC: " + si.AC);
-			i = i * (attacker.THAC0 - si.AC);
-			Debug.Log ("i: " + i);
-			si.HP = si.HP - i;
+			Debug.Log ("Valore atteso dado: " + i);
+			float probabilityHit = (20.0F - ((attacker.THAC0 - si.AC) - 1)) / 20.0F;
+			Debug.Log("Hit: " + probabilityHit);
+			float dmg = i * probabilityHit;
+			Debug.Log ("Danno finale: " + dmg);
+			si.HP = si.HP - dmg;
 			//if (si.HP <= 0)
 			//	Destroy (si.gameObject);
 		}

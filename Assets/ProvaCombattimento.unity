@@ -201,15 +201,15 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 12171354}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 716ccb1a26f4a4fc59c4bdc762a94abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   paused: 0
   target: {fileID: 0}
-  targetTag: Player
+  targetTag: NPC Enemy
   sensingRange: 10
   reactionTime: 0
   needLineOfSight: 1
@@ -223,6 +223,29 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 12171353}
   m_Script: {fileID: 11500000, guid: ae8f00a7499564c5b8a0a8f17df03277, type: 3}
+--- !u!114 &12171360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 12171354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98281fc5af45842cd972240640b78605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  paused: 0
+  target: {fileID: 0}
+  targetTag: Player
+  sensingRange: 10
+  reactionTime: 0
+  needLineOfSight: 1
+  heightOfSight: 0.95
+  circleColor: {r: 0, g: 0, b: 1, a: 0.5}
+  goTowardTarget: 1
+  speed: 4
+  stopAt: 2
 --- !u!1001 &90913340
 Prefab:
   m_ObjectHideFlags: 0
@@ -613,8 +636,6 @@ MonoBehaviour:
   HP: 30
   AC: 5
   THAC0: 10
-  Damage: 8
-  Mutiplier: 1
   Bonus: 2
   showCallout: 1
 --- !u!1 &1356104594

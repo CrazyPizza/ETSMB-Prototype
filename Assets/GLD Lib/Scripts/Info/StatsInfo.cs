@@ -18,13 +18,13 @@ public class StatsInfo : MonoBehaviour {
 	[Header("Hit Points")]
 	//public int HD = 3;
 	//public int HDBonus = 0;
-	public int HP = 10;
+	public float HP = 10;
 
 	[Header("Combat Information")]
 	public int AC = 10;
 	public int THAC0 = 10;
-	public int Damage = 8;
-	public int Mutiplier = 1;
+	//public int Damage = 8;
+	//public int Mutiplier = 1;
 	public int Bonus = 0;
 
 	[Space(10)]
