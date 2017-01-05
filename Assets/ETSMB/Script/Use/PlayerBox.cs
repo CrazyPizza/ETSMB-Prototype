@@ -8,13 +8,13 @@ public class PlayerBox : MonoBehaviour {
 
 	float distance = 2F;
 	RaycastHit obj;
-	BoxManager box;
+	BoxManager boxManager;
 
 	void Update () {
 		if (active && Input.GetKeyDown (key) && Physics.Raycast (this.transform.position, this.transform.forward, out obj, distance)) {
 			if (obj.collider.gameObject.tag == "Box") {
-				box = obj.collider.gameObject.GetComponent<BoxManager> ();
-				box.Open();
+				boxManager = obj.collider.gameObject.GetComponent<BoxManager> ();
+				boxManager.Open(obj.collider.gameObject);
 				Destroy (obj.collider.gameObject);
 			}
 		}
