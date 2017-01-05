@@ -18,7 +18,11 @@ public class StatsInfo : MonoBehaviour {
 	[Header("Hit Points")]
 	//public int HD = 3;
 	//public int HDBonus = 0;
+<<<<<<< HEAD
 	public float HP = 10F;
+=======
+	public float HP = 10;
+>>>>>>> origin/master
 
 	[Header("Combat Information")]
 	public int AC = 10;

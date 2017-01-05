@@ -16,7 +16,10 @@ TagManager:
   - NPC Ally
   - NPC Enemy
   - PlayerBody
+<<<<<<< HEAD
   - Box
+=======
+>>>>>>> origin/master
   layers:
   - Default
   - TransparentFX
