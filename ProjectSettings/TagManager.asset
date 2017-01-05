@@ -3,23 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - NPC
-  - Ceiling
-  - Floor
-  - Fire
-  - MapPoint
-  - Trap
-  - Wall
-  - RallyPoint
-  - Bridge
-  - NPC Ally
-  - NPC Enemy
-  - PlayerBody
-<<<<<<< HEAD
-  - Box
-=======
->>>>>>> origin/master
+  tags: []
   layers:
   - Default
   - TransparentFX
