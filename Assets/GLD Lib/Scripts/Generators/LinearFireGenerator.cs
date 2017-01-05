@@ -6,8 +6,10 @@ public class LinearFireGenerator : MonoBehaviour {
 	public Transform ammo = null;
 	[Range(0.01f, 100f)] public float speed = 75;
 
+	public StatsInfo stats;
+
 	public void Fire(Transform t) {
-		if (ammo != null) {
+		if (ammo != null) { 
 			Transform bullet = (Transform) Instantiate (ammo, transform.position, transform.parent.rotation);
 			Vector3 aim;
 			if (t == null)
@@ -18,6 +20,7 @@ public class LinearFireGenerator : MonoBehaviour {
 				aim = (dir - transform.position).normalized;
 			}
 			bullet.GetComponent<Rigidbody> ().velocity = aim * speed;
+			bullet.GetComponent<DamageProvider> ().attacker = stats;
 		}
 	}
 

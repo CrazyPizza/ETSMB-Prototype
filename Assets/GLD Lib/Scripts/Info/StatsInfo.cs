@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StatsInfo : MonoBehaviour {
 
-	private int[] bonuses = {0, 0, 0, -3, -2, -2, -1, -1, -1, 0, 0, 0, 0, +1, +1, +1, +2, +2, +3 }; 
+	//private int[] bonuses = {0, 0, 0, -3, -2, -2, -1, -1, -1, 0, 0, 0, 0, +1, +1, +1, +2, +2, +3 }; 
 
 	public bool actve = true;
 
@@ -16,15 +16,15 @@ public class StatsInfo : MonoBehaviour {
 	[Range(3, 18)] public int CHR = 9;
 
 	[Header("Hit Points")]
-	public int HD = 3;
-	public int HDBonus = 0;
-	public int HP = 0;
+	//public int HD = 3;
+	//public int HDBonus = 0;
+	public float HP = 10F;
 
 	[Header("Combat Information")]
 	public int AC = 10;
 	public int THAC0 = 10;
-	public int Damage = 8;
-	public int Mutiplier = 1;
+	//public int Damage = 8;
+	//public int Mutiplier = 1;
 	public int Bonus = 0;
 
 	[Space(10)]
@@ -35,14 +35,7 @@ public class StatsInfo : MonoBehaviour {
 	private GUIStyle fg, bg;
 
 	void Start() {
-		if (HP == 0) {
-			int r;
-			for (int i = 0; i < HD; i += 1) {
-				r = Random.Range (1, 8) + bonuses [CON];
-				HP += (r <= 0) ? 1 : r;
-			}
-		}
-
+		
 		fg = new GUIStyle ();
 		fg.font = Resources.Load<Font>("Fonts/courier");
 		fg.normal.textColor = Color.black;
@@ -65,7 +58,7 @@ public class StatsInfo : MonoBehaviour {
 	}
 
 	void OnMouseEnter() {
-		if (showCallout) currentText = baseTxt + "\nHP  " + (HP < 10 ? " " : "") + HP;
+		if (showCallout) currentText = baseTxt + "\nHP  " + (HP <= 10 ? " " : "") + HP;
 	}
 
 	void OnMouseExit() {

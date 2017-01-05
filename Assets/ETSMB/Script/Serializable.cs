@@ -9,7 +9,6 @@ public class PlayerStatistics {
 
 	public int SceneID;
 	public float PositionX, PositionY, PositionZ;
-
 	public string NAME = "Dass Jennir";
 	public int STR = 16;
 	public int CON = 15;
@@ -22,7 +21,7 @@ public class PlayerStatistics {
 	public int AC = 5;
 	public int THAC0 = 10;
 	public int Damage = 6;
-	public int Mutiplier = 1;
+	public int Multiplier = 1;
 	public int Bonus = 2;
 
 }

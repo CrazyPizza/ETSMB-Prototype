@@ -8,7 +8,8 @@ public class NPCBlaster : _WeaponUseBehaviour {
 		LinearFireGenerator lfg = GetComponentInChildren<LinearFireGenerator> ();
 		if (lfg == null)
 			enabled = false;
-		else
+		else {
 			Fire = lfg.Fire;
+		}
 	}
 }
