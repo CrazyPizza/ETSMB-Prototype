@@ -6,6 +6,8 @@ public class PlayerGrenadeLauncer : MonoBehaviour {
 	public bool active = true;
 	public KeyCode key = KeyCode.Backslash;
 
+	private int granate = 3;
+
 	private ParabolicFireGenerator pfg = null;
 
 	void Start () {
@@ -13,8 +15,23 @@ public class PlayerGrenadeLauncer : MonoBehaviour {
 	}
 	
 	void Update () {
+		
 		if (pfg && active && Input.GetKeyDown (key)) {
-			pfg.Fire (null);
+			
+			Debug.Log ("Granate disponibili: " + granate);
+
+			if (granate > 0) {
+
+				pfg.Fire (null);
+				granate = granate - 1;
+				Debug.Log ("Rimangono ancora " + granate + " granate");
+			
+			} else {
+
+				Debug.Log ("Granate finite");
+				active = false;
+			
+			}
 		}
 	}
 }

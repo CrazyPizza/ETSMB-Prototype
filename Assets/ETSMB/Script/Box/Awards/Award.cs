@@ -3,9 +3,11 @@ using System.Collections;
 
 public class Award {
 
+	GameObject player = GameObject.FindWithTag ("Player");
+
 	public void GiveAward1(bool fail) {
-		
-		GameObject player = GameObject.FindWithTag ("Player");
+
+		Debug.Log ("Award 1");
 		Debug.Log ("HP prima: " + player.GetComponentInChildren<StatsInfo> ().HP);
 		if (fail == false)
 			player.GetComponentInChildren<StatsInfo> ().HP += (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
@@ -16,15 +18,34 @@ public class Award {
 	}
 
 	public void GiveAward2(bool fail) {
+		
 		Debug.Log ("Award 2");
+		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
+		if(fail == false)
+			player.GetComponentInChildren<StatsInfo> ().HP += (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
+		Debug.Log ("HP dopo: " + player.GetComponentInChildren<StatsInfo> ().HP);
+	
 	}
 
 	public void GiveAward3(bool fail) {
+
 		Debug.Log ("Award 3");
+		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
+		if (fail == false)
+			player.GetComponentInChildren<PlayerGrenadeLauncer> ().active = true;
+		else
+			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
+		Debug.Log ("HP dopo: " + player.GetComponentInChildren<StatsInfo> ().HP);
+
 	}
 
 	public void GiveAward4(bool fail) {
 		Debug.Log ("Award 4");
+		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
+		if (fail == false)
+			player.GetComponentInChildren<StatsInfo> ().HP += (player.GetComponentInChildren<StatsInfo> ().HP * 0.3F);
+		else
+			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.3F);
 	}
 
 	public void GiveAward5(bool fail) {
@@ -32,6 +53,6 @@ public class Award {
 	}
 
 	public void GiveAward6(bool fail) {
-		Debug.Log ("Award 6");	
+		Debug.Log ("Award 6");
 	}
 }

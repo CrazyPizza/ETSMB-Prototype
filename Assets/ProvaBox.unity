@@ -418,6 +418,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   key: 101
+--- !u!114 &1544930150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1544930147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb9bd11e92c54c878aef1c4a9deef72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  key: 92
+--- !u!4 &1544930154 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012027835618, guid: d798145a792b54a789af9bae43786715,
+    type: 2}
+  m_PrefabInternal: {fileID: 1544930146}
 --- !u!1 &1756362294
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +652,48 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0.031034483, g: 0.031034483, b: 0.031034483, a: 1}
+--- !u!1001 &1991551593
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1544930154}
+    m_Modifications:
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012862396350, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b93a64b7f2af3487abe316311b6ee352, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &2119795796
 GameObject:
   m_ObjectHideFlags: 0
