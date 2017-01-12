@@ -13,8 +13,9 @@ public class PlayerBaster : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (lfg && active && Input.GetKeyDown (key)) {
+		if (lfg && active && Input.GetKeyDown (key))
 			lfg.Fire (null);
-		}
 	}
+
+
 }

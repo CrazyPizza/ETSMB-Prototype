@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c088635a08243099a05d10afe0f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
+  time: 1
   onContact: 0
 --- !u!114 &114000012847122114
 MonoBehaviour:

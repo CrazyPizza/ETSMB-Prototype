@@ -43,9 +43,9 @@ public class Award {
 		Debug.Log ("Award 4");
 		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
 		if (fail == false)
-			player.GetComponentInChildren<StatsInfo> ().HP += (player.GetComponentInChildren<StatsInfo> ().HP * 0.3F);
+			player.GetComponentInChildren<PlayerGrenadeLauncer> ().addGranade (1);
 		else
-			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.3F);
+			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
 	}
 
 	public void GiveAward5(bool fail) {

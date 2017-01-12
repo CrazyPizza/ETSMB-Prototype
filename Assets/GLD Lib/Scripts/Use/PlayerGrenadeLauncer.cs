@@ -34,4 +34,8 @@ public class PlayerGrenadeLauncer : MonoBehaviour {
 			}
 		}
 	}
+
+	public void addGranade(int i) {
+		granate += i;
+	}
 }

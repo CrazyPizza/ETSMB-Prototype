@@ -11,10 +11,9 @@ public class PlayerLightsaber : MonoBehaviour {
 	void Start () {
 		saber = GetComponentInChildren<LightsaberManager> ();
 	}
-	
+
 	void Update () {
-		if (saber && active && Input.GetKeyDown (key)) {
+		if (saber && active && Input.GetKeyDown (key))
 			saber.active = !saber.active;
-		}
 	}
 }
