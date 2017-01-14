@@ -9,10 +9,13 @@ public class CheckpointController : MonoBehaviour {
 	public GameObject[] checkpointList; //Lista dei checkpoint, la posizione nella lista deve rispecchiare il numero del checkpoint
 	public GameObject player; //Riferimento al player
 	public int activeCheckpoint=0; //Public per un controllo veloce nell'inspector
+	private int playerHP=0;
+	private int initialHP=0;
 
 	void Start () {
 		//Prende le posizioni di partenza dei nemici, usate per resettarli nel loro punto originario
 		//NON ANCORA IMPLEMENTATO
+		initialHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
 		enemiesPositions=new Transform[enemiesList.Length];
 		for(int i=0; i< enemiesList.Length; i++){
 			enemiesPositions[i]=enemiesList[i].transform;
@@ -21,7 +24,8 @@ public class CheckpointController : MonoBehaviour {
 
 	void Update () {
 		//Se il player muore, resetta dal checkpoint attualmente attivo
-		if (PlayerState.Instance.localPlayerData.HP <= 0) {
+		playerHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
+		if (playerHP <= 0) {
 			resetToCheckpoint();
 		}
 
@@ -36,7 +40,7 @@ public class CheckpointController : MonoBehaviour {
 		int offset=1;//Per non far respawnare gli alleati in testa ad altri alleati
 
 		//Reset della vita del player e riposizionamento al checkpoint
-		PlayerState.Instance.localPlayerData.HP=30;
+		player.GetComponentInChildren<StatsInfo>().HP=initialHP;
 		player.transform.position=activeCheckpointObj.transform.position;
 		//Riposizionamento di tutti gli alleati NON morti. Se sono morti sono null nel vettore e quindi li ignora
 		for(int i=0; i< alliesList.Length; i++){

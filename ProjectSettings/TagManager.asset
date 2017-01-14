@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Box
+  - Wall
+  - Floor
+  - NPC Enemy
+  - NPC
+  - NPC Ally
+  - PlayerBody
   layers:
   - Default
   - TransparentFX
