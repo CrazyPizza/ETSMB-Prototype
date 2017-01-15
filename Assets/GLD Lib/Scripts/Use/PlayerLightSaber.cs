@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PlayerLightsaber : MonoBehaviour {
 
-	public bool active = true;
-	public KeyCode key = KeyCode.L;
+    public bool active = true;
 
-	private LightsaberManager saber = null;
+    public KeyCode key = KeyCode.L;
+    public KeyCode attack = KeyCode.O;
 
-	void Start () {
-		saber = GetComponentInChildren<LightsaberManager> ();
-	}
+    private LightsaberManager saber = null;
 
-	void Update () {
-		if (saber && active && Input.GetKeyDown (key))
-			saber.active = !saber.active;
-	}
+    void Start() {
+        saber = GetComponentInChildren<LightsaberManager>();
+    }
+
+    void Update() {
+        if(saber && active && Input.GetKeyDown(key))
+            saber.active = !saber.active;
+        
+    }
 }
