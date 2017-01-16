@@ -107,7 +107,7 @@ MonoBehaviour:
   active: 1
   multiplicity: 1
   dice: 6
-  attacker: {fileID: 0}
+  bonus: 0
 --- !u!135 &135000013402412424
 SphereCollider:
   m_ObjectHideFlags: 1

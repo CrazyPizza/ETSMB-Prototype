@@ -16,12 +16,7 @@ public class MineBehaviour : _VigilantBehaviour {
 
 	public void TriggerTrap(Transform t) {
 		ExplosionGenerator eg = GetComponent<ExplosionGenerator> ();
-        if (eg != null) {
-            GroundTrapDamage gtp = GetComponent<GroundTrapDamage>();
-            if(!gtp.Disarm(t)) {
-                eg.Detonate(t);
-            }
-        }
+		if (eg != null) eg.Detonate (t);
 		active = false;
 	}
 

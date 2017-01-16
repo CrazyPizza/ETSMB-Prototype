@@ -24,31 +24,26 @@ public class DamageReceiver : MonoBehaviour {
 			Debug.Log ("Danno finale: " + dmg);
 			si.HP = si.HP - dmg;
 
-            isDied(si);
+			if (si.HP <= 0) {
+				if (si.name == "Player" || si.name == "Xenus") {
+					//RESTART
+				} else if (si.name == "Mercenary Brute") {
+                    Debug.Log("Mercenario stordito");
+                    StartCoroutine(MercenaryStun(si.gameObject));
+                } else {
+					Destroy (si.gameObject);
+				}
+			}
 
 		}
 	}
 
-    void isDied(StatsInfo si) {
-        if(si.HP <= 0) {
-            if(si.name == "Player" || si.name == "Xenus") {
-                //RESTART
-            } else if(si.name == "Mercenary Brute") {
-                Debug.Log("Mercenario stordito");
-                StartCoroutine(MercenaryStun(si.gameObject));
-            } else {
-                Destroy(si.gameObject);
-            }
-        }
-    }
-      IEnumerator MercenaryStun(GameObject obj) {
+    IEnumerator MercenaryStun(GameObject obj) {
         obj.GetComponent<NPCBlaster>().active = false;
         yield return new WaitForSeconds(5);
         si.HP = 30;
         obj.GetComponent<NPCBlaster>().active = true;
         Debug.Log("Mecenario ripreso");
     }
-
-
 
 }

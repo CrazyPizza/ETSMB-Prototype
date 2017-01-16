@@ -22,7 +22,6 @@ GameObject:
   - 54: {fileID: 54000013324464046}
   - 114: {fileID: 114000011284659116}
   - 114: {fileID: 114000012847122114}
-  - 114: {fileID: 114000011316481144}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -138,22 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
-  onContact: 1
---- !u!114 &114000011316481144
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010751923980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407806f99161e44a6bd2f557df7fa899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  multiplicity: 2
-  dice: 7
-  attacker: {fileID: 0}
+  onContact: 0
 --- !u!114 &114000012847122114
 MonoBehaviour:
   m_ObjectHideFlags: 1

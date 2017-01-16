@@ -54,6 +54,7 @@ GameObject:
   - 4: {fileID: 4000012392319474}
   - 114: {fileID: 114000013301485228}
   - 114: {fileID: 114000012071163596}
+  - 114: {fileID: 114000011482692736}
   m_Layer: 0
   m_Name: LightSaber
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012972242004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.902, z: -8.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -81,7 +82,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013412818020}
   m_LocalRotation: {x: 0.5686694, y: 0.10692078, z: -0.07486672, w: 0.81214416}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0.72, y: 0.5, z: 0}
   m_LocalScale: {x: 0.05, y: 1.5, z: 0.05}
   m_LocalEulerAnglesHint: {x: 70, y: 15, z: 0}
   m_Children:
@@ -96,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010313093742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -15.5, y: 1.425, z: 10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -136,6 +137,21 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000011482692736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013412818020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 407806f99161e44a6bd2f557df7fa899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  multiplicity: 1
+  dice: 8
+  attacker: {fileID: 0}
 --- !u!114 &114000012071163596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,7 +164,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  stats: {fileID: 0}
 --- !u!114 &114000013301485228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +229,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 0
   m_Radius: 0.5
-  m_Height: 1
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

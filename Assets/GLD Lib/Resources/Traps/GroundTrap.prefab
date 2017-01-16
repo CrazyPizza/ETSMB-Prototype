@@ -21,7 +21,6 @@ GameObject:
   - 4: {fileID: 4000011734528908}
   - 114: {fileID: 114000013094494188}
   - 114: {fileID: 114000014048874686}
-  - 114: {fileID: 114000011471603158}
   m_Layer: 0
   m_Name: GroundTrap
   m_TagString: Trap
@@ -73,17 +72,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011734528908}
   m_RootOrder: 0
---- !u!114 &114000011471603158
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011550105612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78a2002b1faa7934d94820231f33fad5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012681335990
 MonoBehaviour:
   m_ObjectHideFlags: 1

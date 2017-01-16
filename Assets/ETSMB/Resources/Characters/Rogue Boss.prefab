@@ -42,7 +42,6 @@ GameObject:
   - 114: {fileID: 114000011018707090}
   - 114: {fileID: 114000011891125314}
   - 114: {fileID: 114000012754266536}
-  - 114: {fileID: 114000012994388512}
   m_Layer: 0
   m_Name: Rogue Boss
   m_TagString: NPC Enemy
@@ -160,7 +159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010477731176}
   m_LocalRotation: {x: -0, y: 0.9999956, z: -0, w: -0.0029675649}
-  m_LocalPosition: {x: 24.147945, y: 0.01, z: 58.01}
+  m_LocalPosition: {x: 24.863655, y: 0.00999999, z: 58.283997}
   m_LocalScale: {x: 0.6, y: 1.7, z: 0.6}
   m_LocalEulerAnglesHint: {x: 0, y: 180.32999, z: 0}
   m_Children:
@@ -182,7 +181,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4c443ff41f7942e498fc245e7d0ee24d, type: 2}
+  - {fileID: 2100000, guid: 688e163450bbc41d8b14827b62993c39, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -241,7 +240,6 @@ MonoBehaviour:
   ammo: {fileID: 4000010972745896, guid: 4d2068f28ad7a4699aca6edbc242aaf3, type: 2}
   force: 10
   angle: 30
-  stats: {fileID: 114000011851197460}
 --- !u!114 &114000011018707090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,11 +335,11 @@ MonoBehaviour:
   paused: 0
   target: {fileID: 0}
   targetTag: Player
-  sensingRange: 15
+  sensingRange: 10
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0.95
-  circleColor: {r: 0.862069, g: 1, b: 0, a: 0.5}
+  circleColor: {r: 0, g: 0, b: 1, a: 0.5}
   goTowardTarget: 0
   speed: 4
   stopAt: 2
@@ -357,18 +355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideMe: 1
---- !u!114 &114000012994388512
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010477731176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bdd4a08286948a7bc5a225b574ef14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
 --- !u!136 &136000012069827142
 CapsuleCollider:
   m_ObjectHideFlags: 1
