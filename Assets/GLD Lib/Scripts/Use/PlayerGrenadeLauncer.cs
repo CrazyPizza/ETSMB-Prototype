@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerGrenadeLauncer : MonoBehaviour {
 
 	public bool active = true;
-	public KeyCode key = KeyCode.Backslash;
+	public KeyCode key = KeyCode.P;
 
 	private int granate = 3;
 

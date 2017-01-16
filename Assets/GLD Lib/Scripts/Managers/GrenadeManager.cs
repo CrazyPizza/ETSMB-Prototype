@@ -8,10 +8,12 @@ public class GrenadeManager : MonoBehaviour {
 
 	private float deadline;
 	private bool active;
+    private DamageProvider dp;
 
 	void Start () {
 		deadline = Time.time + time;
 		active = true;
+        dp = GetComponent<DamageProvider>();
 	}
 
 	void Update() {
@@ -27,6 +29,7 @@ public class GrenadeManager : MonoBehaviour {
 		if (onContact) {
 			ExplosionGenerator eg = GetComponent<ExplosionGenerator> ();
 			if (eg != null) eg.Detonate (null);
+            if (dp != null) dp.ProvideDamage(col.transform);
 			Destroy (gameObject);
 		}
 	}

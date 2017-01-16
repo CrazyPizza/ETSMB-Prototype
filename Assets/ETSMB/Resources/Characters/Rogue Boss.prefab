@@ -41,7 +41,6 @@ GameObject:
   - 114: {fileID: 114000011851197460}
   - 114: {fileID: 114000011018707090}
   - 114: {fileID: 114000011891125314}
-  - 114: {fileID: 114000012754266536}
   m_Layer: 0
   m_Name: Rogue Boss
   m_TagString: NPC Enemy
@@ -159,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010477731176}
   m_LocalRotation: {x: -0, y: 0.9999956, z: -0, w: -0.0029675649}
-  m_LocalPosition: {x: 0.86468124, y: 0.01, z: 5.748578}
+  m_LocalPosition: {x: 1.0014381, y: 0.01, z: 8.84737}
   m_LocalScale: {x: 0.6, y: 1.7, z: 0.6}
   m_LocalEulerAnglesHint: {x: 0, y: 180.32999, z: 0}
   m_Children:
@@ -240,6 +239,7 @@ MonoBehaviour:
   ammo: {fileID: 4000010972745896, guid: 4d2068f28ad7a4699aca6edbc242aaf3, type: 2}
   force: 10
   angle: 30
+  stats: {fileID: 114000011851197460}
 --- !u!114 &114000011018707090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,7 +260,7 @@ MonoBehaviour:
   needLineOfSight: 1
   heightOfSight: 0.95
   circleColor: {r: 0.862069, g: 1, b: 0, a: 0.5}
-  pauseTime: 1
+  pauseTime: 3
   reloadTime: 0.5
 --- !u!114 &114000011851197460
 MonoBehaviour:
@@ -305,7 +305,7 @@ MonoBehaviour:
   needLineOfSight: 1
   heightOfSight: 0.95
   circleColor: {r: 0.94482756, g: 1, b: 0, a: 0.5}
-  pauseTime: 1
+  pauseTime: 3
   reloadTime: 0.5
 --- !u!114 &114000012518639272
 MonoBehaviour:
@@ -320,29 +320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   target: {fileID: 0}
---- !u!114 &114000012754266536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010477731176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98281fc5af45842cd972240640b78605, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  paused: 0
-  target: {fileID: 0}
-  targetTag: Player
-  sensingRange: 10
-  reactionTime: 0
-  needLineOfSight: 1
-  heightOfSight: 0.95
-  circleColor: {r: 0.8206897, g: 1, b: 0, a: 0.5}
-  goTowardTarget: 0
-  speed: 4
-  stopAt: 2
 --- !u!114 &114000012771125640
 MonoBehaviour:
   m_ObjectHideFlags: 1
