@@ -28,7 +28,7 @@ GameObject:
   m_Layer: 0
   m_Name: Mercenary Brute
   m_TagString: NPC Ally
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -67,6 +67,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013171652082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013067883656}
+  - 114: {fileID: 114000014257659370}
+  m_Layer: 0
+  m_Name: BlasterHeavy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013482930086
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,22 +95,6 @@ GameObject:
   - 136: {fileID: 136000010204934390}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000013583689872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013008479296}
-  - 114: {fileID: 114000010906283262}
-  m_Layer: 0
-  m_Name: Blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,13 +120,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011150969200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2841377, y: 0.01, z: 2.98}
+  m_LocalPosition: {x: 1.2804947, y: 0.01, z: 5.1208205}
   m_LocalScale: {x: 0.6, y: 1.7, z: 0.6}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012406022366}
   - {fileID: 4000010161813576}
-  - {fileID: 4000013008479296}
+  - {fileID: 4000013067883656}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000012406022366
@@ -156,12 +156,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012406022366}
   m_RootOrder: 0
---- !u!4 &4000013008479296
+--- !u!4 &4000013067883656
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013583689872}
+  m_GameObject: {fileID: 1000013171652082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6, y: 0.7, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -182,7 +182,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 688e163450bbc41d8b14827b62993c39, type: 2}
+  - {fileID: 2100000, guid: d4e2b59cf5842c54e8a55faef0eb066f, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -307,20 +307,6 @@ MonoBehaviour:
   circleColor: {r: 0, g: 0, b: 1, a: 0.5}
   pauseTime: 1
   reloadTime: 0.5
---- !u!114 &114000010906283262
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013583689872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b163b32c49894277902da932b658352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: {fileID: 4000010761898532, guid: f0b104de49e1a403c96a15d03be6d8e0, type: 2}
-  speed: 75
-  stats: {fileID: 114000010036947074}
 --- !u!114 &114000011897896630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,6 +354,20 @@ MonoBehaviour:
   goTowardTarget: 1
   speed: 4
   stopAt: 2
+--- !u!114 &114000014257659370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013171652082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b163b32c49894277902da932b658352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: {fileID: 4000010743780102, guid: c75199f0de1b13f48a4593101e10dc46, type: 2}
+  speed: 75
+  stats: {fileID: 114000010036947074}
 --- !u!136 &136000010204934390
 CapsuleCollider:
   m_ObjectHideFlags: 1

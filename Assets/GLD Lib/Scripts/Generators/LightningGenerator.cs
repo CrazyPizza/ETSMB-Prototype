@@ -29,7 +29,9 @@ public class LightningGenerator : MonoBehaviour {
 	private int animationOffsetIndex;
 	private int animationPingPongDirection = 1;
 
-	private void NormalVector(ref Vector3 directionNormalized, out Vector3 side) {
+    private DamageProvider dp;
+
+    private void NormalVector(ref Vector3 directionNormalized, out Vector3 side) {
 		if (directionNormalized == Vector3.zero) {
 			side = Vector3.right;
 		} else {
@@ -191,7 +193,8 @@ public class LightningGenerator : MonoBehaviour {
 		lr = GetComponent<LineRenderer> ();
 		lr.SetVertexCount (0);
 		UpdateFromMaterialChange ();
-	}
+        dp = GetComponent<DamageProvider>();
+    }
 
 	private float timer;
 	private float bigTimer;
@@ -215,6 +218,7 @@ public class LightningGenerator : MonoBehaviour {
 	public void Fire(Transform t) {
 		if (bigTimer <= 0f) {
 			end = t == null ? transform.position + transform.root.forward * maxDistance : t.position;
+            if(dp != null) dp.ProvideDamage(t);            
 			bigTimer = totalDuration;
 		}
 	}
