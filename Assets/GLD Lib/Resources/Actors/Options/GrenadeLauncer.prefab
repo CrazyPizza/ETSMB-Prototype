@@ -22,7 +22,7 @@ GameObject:
   - 114: {fileID: 114000012408356616}
   m_Layer: 0
   m_Name: GrenadeLauncer
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,3 +54,4 @@ MonoBehaviour:
   ammo: {fileID: 4000010972745896, guid: 4d2068f28ad7a4699aca6edbc242aaf3, type: 2}
   force: 10
   angle: 45
+  stats: {fileID: 0}

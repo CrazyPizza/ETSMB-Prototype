@@ -11,6 +11,8 @@ TagManager:
   - NPC
   - NPC Ally
   - PlayerBody
+  - Trap
+  - Weapon
   layers:
   - Default
   - TransparentFX

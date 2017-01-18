@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Orvax4_Desert.unity
+  - enabled: 1
+    path: Assets/ProvaVideo.unity
+  - enabled: 1
+    path: Assets/ProvaCombattimento.unity

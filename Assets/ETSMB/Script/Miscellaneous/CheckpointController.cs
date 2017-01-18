@@ -7,10 +7,13 @@ public class CheckpointController : MonoBehaviour {
 	public Transform[] enemiesPositions; //non usata attualmente
 	public GameObject[] alliesList; //Lista degli alleati da popolare nell'inspector
 	public GameObject[] checkpointList; //Lista dei checkpoint, la posizione nella lista deve rispecchiare il numero del checkpoint
+    public GameObject allySpecial; // Nel caso ci sia un alleato speciale come nella parte iniziale
 	public GameObject player; //Riferimento al player
 	public int activeCheckpoint=0; //Public per un controllo veloce nell'inspector
 	private int playerHP=0;
 	private int initialHP=0;
+    private int allySpecialHP = 0;
+    private int allySpecialInitialHP = 0;
 
 	void Start () {
 		//Prende le posizioni di partenza dei nemici, usate per resettarli nel loro punto originario
@@ -25,9 +28,14 @@ public class CheckpointController : MonoBehaviour {
 	void Update () {
 		//Se il player muore, resetta dal checkpoint attualmente attivo
 		playerHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
-		if (playerHP <= 0) {
-			resetToCheckpoint();
-		}
+        if(allySpecial != null) allySpecialHP = (int) allySpecial.GetComponent<StatsInfo>().HP;
+        if(allySpecial != null) {
+            if(playerHP <= 0 || allySpecialHP <= 0)
+                resetToCheckpoint();
+        } else {
+            if(playerHP <= 0)
+                resetToCheckpoint();
+        }
 
 	}
 
@@ -42,6 +50,7 @@ public class CheckpointController : MonoBehaviour {
 		//Reset della vita del player e riposizionamento al checkpoint
 		player.GetComponentInChildren<StatsInfo>().HP=initialHP;
 		player.transform.position=activeCheckpointObj.transform.position;
+        if (allySpecial != null) allySpecial.GetComponent<StatsInfo>().HP = allySpecialInitialHP;
 		//Riposizionamento di tutti gli alleati NON morti. Se sono morti sono null nel vettore e quindi li ignora
 		for(int i=0; i< alliesList.Length; i++){
 			if(alliesList[i]!=null){

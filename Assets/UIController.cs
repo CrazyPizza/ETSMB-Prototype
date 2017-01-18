@@ -17,16 +17,22 @@ public class UIController : MonoBehaviour {
 	public GameObject toastImage;//Riferimento al toast con immagine
 	public GameObject toastNormale;//Riferimento al toast normale
 
+    public Text weaponText;
+    private Text[] weaponsText;
+    public GameObject[] weaponsList;
+
 	void Awake() {
 		UI=this;
 	}
 
 	void Start () {
 		initialiseHealthBars();
+        initialiseWeapons();
 	}
 
 	void Update () {
 		updateHealthBars();
+       // updateWeapons();
 	}
 
 	//
@@ -102,6 +108,36 @@ public class UIController : MonoBehaviour {
 		}
 	}
 
+    void initialiseWeapons() {
+
+        player = GameObject.FindWithTag("Player");
+        weaponsText = new Text[weaponsList.Length];
+
+        for (int i=0; i < weaponsList.Length; i++) {
+
+            string weaponName = weaponsList[i].name;
+
+                switch (weaponName) {
+                    case "Blaster":
+                        weaponText.text = weaponName + " : RETURN";
+                        break;
+                    case "GrenadeLauncher":
+                        weaponText.text = weaponName + " : P";
+                        break;
+                    default:
+                        weaponText.text = "";
+                        break;
+           
+                }
+
+            weaponsText[i] = Instantiate(weaponText);
+            weaponsText[i].rectTransform.SetParent(mainCanvas.transform);
+            weaponsText[i].rectTransform.anchoredPosition = new Vector2(weaponText.rectTransform.anchoredPosition.x, 
+                weaponText.rectTransform.anchoredPosition.y - healthbarOffset);
+            healthbarOffset += 30;            
+        }
+
+    }
 }
 
 
