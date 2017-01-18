@@ -16,6 +16,8 @@ public class UIController : MonoBehaviour {
 	private int allyCurrentHP=30;//Variabile che in ogni momento ha dentro gli HP dell'alleato valutato
 	public GameObject toastImage;//Riferimento al toast con immagine
 	public GameObject toastNormale;//Riferimento al toast normale
+	public GameObject currentWeaponPanel;//Riferimento al pannello con l'immagine dell'arma in uso
+
 
 	void Awake() {
 		UI=this;
@@ -23,6 +25,7 @@ public class UIController : MonoBehaviour {
 
 	void Start () {
 		initialiseHealthBars();
+		setCurrentWeaponGUI("Blaster");
 	}
 
 	void Update () {
@@ -99,6 +102,29 @@ public class UIController : MonoBehaviour {
 			}else{
 				alliesHealthBars[i].text="ALLY: DEAD";
 			}
+		}
+	}
+
+	//
+	// GUI-CURRENT WEAPON
+	//
+	public void setCurrentWeaponGUI(string arma){
+		Text currentWeaponText=currentWeaponPanel.GetComponentsInChildren<Text>()[0];
+		Image currentWeaponImage=currentWeaponPanel.GetComponentsInChildren<Image>()[1];
+
+		switch(arma){
+		case "Lightsaber":
+			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/LightsaberIcon");
+			currentWeaponText.text=arma;
+			break;
+		case "GrenadeLauncher":
+			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/GrenadelauncherIcon");
+			currentWeaponText.text=arma;
+			break;
+		default://blaster
+			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/BlasterIcon");
+			currentWeaponText.text="Blaster";
+			break;
 		}
 	}
 

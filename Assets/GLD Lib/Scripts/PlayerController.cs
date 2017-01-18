@@ -38,12 +38,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		//TEMPORANEO!!!/////////
-		if(Input.GetKeyDown(KeyCode.R))
-			UIController.UI.showImageToast("POZIONE!","Hai trovato una pozione","techno-heart",4);
-		if(Input.GetKeyDown(KeyCode.F))
-			UIController.UI.showToast("PROVA TESTO!","Gnammete",4);
-		//////////////////////////////////////////////////////////
 
 		if (active) {
 			if (rb) {
