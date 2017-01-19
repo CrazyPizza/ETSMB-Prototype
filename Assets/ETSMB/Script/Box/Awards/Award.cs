@@ -6,47 +6,43 @@ public class Award {
 	GameObject player = GameObject.FindWithTag ("Player");
 
 	public void GiveAward1(bool fail) {
-
-		Debug.Log ("Award 1");
-		Debug.Log ("HP prima: " + player.GetComponentInChildren<StatsInfo> ().HP);
-		if (fail == false)
-			player.GetComponentInChildren<StatsInfo> ().HP += (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
-		else
-			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
-		Debug.Log ("HP dopo: " + player.GetComponentInChildren<StatsInfo> ().HP);
-
+        if(fail == false) {
+            player.GetComponentInChildren<StatsInfo>().HP += (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
+            UIController.UI.showImageToast("SUCCESS","You founded a potion, +20% HP","potionIcon",4);
+        } else {
+            player.GetComponentInChildren<StatsInfo>().HP -= (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
+            UIController.UI.showImageToast("FAIL","A snake bit you, -20% HP","snakeIcon",4);
+        }
 	}
 
 	public void GiveAward2(bool fail) {
-		
-		Debug.Log ("Award 2");
-		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
-		if(fail == false)
-			player.GetComponentInChildren<StatsInfo> ().HP += (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
-		Debug.Log ("HP dopo: " + player.GetComponentInChildren<StatsInfo> ().HP);
-	
-	}
+        if(fail == false) {
+            player.GetComponentInChildren<StatsInfo>().HP += (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
+            UIController.UI.showImageToast("SUCCESS","You founded a potion, +20% HP","potionIcon",4);
+        } else {
+            UIController.UI.showImageToast("FAIL","The box stay locked permanently","lockIcon",4);
+        }
+    }
 
 	public void GiveAward3(bool fail) {
-
-		Debug.Log ("Award 3");
-		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
-		if (fail == false)
-			player.GetComponentInChildren<PlayerGrenadeLauncer> ().active = true;
-		else
-			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
-		Debug.Log ("HP dopo: " + player.GetComponentInChildren<StatsInfo> ().HP);
-
+        if(fail == false) {
+            player.GetComponentInChildren<PlayerGrenadeLauncer>().active = true;
+            UIController.UI.showImageToast("SUCCESS", "You founded a grenade launcher", "GrenadelauncherIcon", 4);
+        } else {
+            player.GetComponentInChildren<StatsInfo>().HP -= (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
+            UIController.UI.showImageToast("FAIL", "Some rocks fall and hit the box", "rockIcon", 4);
+        }
 	}
 
 	public void GiveAward4(bool fail) {
-		Debug.Log ("Award 4");
-		Debug.Log("HP prima: " + player.GetComponentInChildren<StatsInfo>().HP);
-		if (fail == false)
-			player.GetComponentInChildren<PlayerGrenadeLauncer> ().addGranade (1);
-		else
-			player.GetComponentInChildren<StatsInfo> ().HP -= (player.GetComponentInChildren<StatsInfo> ().HP * 0.2F);
-	}
+        if(fail == false) {
+            player.GetComponentInChildren<PlayerGrenadeLauncer>().addGranade(1);
+            UIController.UI.showImageToast("SUCCESS","You founded 1 grenade extra","grenadeIcon",4);
+        } else {
+            player.GetComponentInChildren<StatsInfo>().HP -= (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
+            UIController.UI.showImageToast("FAIL","Some rocks fall and hit the box","rockIcon",4);
+        }
+    }
 
 	public void GiveAward5(bool fail) {
 		Debug.Log ("Award 5");

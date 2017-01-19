@@ -551,6 +551,11 @@ Prefab:
       propertyPath: toastNormale
       value: 
       objectReference: {fileID: 635190924}
+    - target: {fileID: 114000012746375604, guid: 24dffc561255d954bb9090335f5fbe10,
+        type: 2}
+      propertyPath: currentWeaponPanel
+      value: 
+      objectReference: {fileID: 1196252696}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24dffc561255d954bb9090335f5fbe10, type: 2}
   m_IsPrefabParent: 0
@@ -608,6 +613,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012458145674, guid: 38f3050523c8c8a44beeecbc4815d227,
     type: 2}
   m_PrefabInternal: {fileID: 283119255}
+--- !u!1 &1196252696 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010674105588, guid: 499b217d92743164182e1f48059ae6b2,
+    type: 2}
+  m_PrefabInternal: {fileID: 5669395}
 --- !u!1 &1241890668 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010477731176, guid: 0bd5940cea5cb3f4c89dd6ad5dc9361d,

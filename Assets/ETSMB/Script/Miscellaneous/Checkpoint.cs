@@ -8,17 +8,12 @@ public class Checkpoint : MonoBehaviour {
 	//nella lista di checkpoint del CheckpointController!!
 
 	void OnTriggerEnter(Collider collider) {
-		/*Debug.Log ("Checkpoint");
-		PlayerState.Instance.localPlayerData.PositionX = transform.position.x;
-		PlayerState.Instance.localPlayerData.PositionY = transform.position.y;
-		PlayerState.Instance.localPlayerData.PositionZ = transform.position.z;
-		//GlobalControl.Instance.currentCheckpoint = gameObject;
-		GlobalControl.Instance.SaveData ();*/
 
 		//Se Jennir entra nel checkpoint, attivalo dicendo al controller il numero impostato in
 		//CheckpointNumber
 		//Il controllo viene fatto sul tag del collider di Jennir, PlayerBody, per evitare
 		//che qualsiasi collider che entra nel checkpoint lo attivi
+
 		if (collider.CompareTag("PlayerBody")){
 			Debug.Log("entrato jennir");
 			controller.setActiveCheckpoint(CheckpointNumber);

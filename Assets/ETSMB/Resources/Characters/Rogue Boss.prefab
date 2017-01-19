@@ -41,6 +41,7 @@ GameObject:
   - 114: {fileID: 114000011851197460}
   - 114: {fileID: 114000011018707090}
   - 114: {fileID: 114000011891125314}
+  - 114: {fileID: 114000013635028686}
   m_Layer: 0
   m_Name: Rogue Boss
   m_TagString: NPC Enemy
@@ -284,7 +285,7 @@ MonoBehaviour:
   AC: 4
   THAC0: 9
   Bonus: 0
-  showCallout: 0
+  showCallout: 1
 --- !u!114 &114000011891125314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,6 +333,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideMe: 1
+--- !u!114 &114000013635028686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010477731176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdd4a08286948a7bc5a225b574ef14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
 --- !u!136 &136000012069827142
 CapsuleCollider:
   m_ObjectHideFlags: 1

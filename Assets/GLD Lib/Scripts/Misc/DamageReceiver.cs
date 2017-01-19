@@ -25,12 +25,14 @@ public class DamageReceiver : MonoBehaviour {
 			si.HP = si.HP - dmg;
 
 			if (si.HP <= 0) {
-				if (si.name == "Mercenary Brute") {
+                if(si.name == "Player" || si.name == "Xenus") {
+                    // ci pensa il checkpoint controller
+                } else if(si.name == "Mercenary Brute") {
                     Debug.Log("Mercenario stordito");
                     StartCoroutine(MercenaryStun(si.gameObject));
                 } else {
-					Destroy (si.gameObject);
-				}
+                    Destroy(si.gameObject);
+                }
 			}
 
 		}

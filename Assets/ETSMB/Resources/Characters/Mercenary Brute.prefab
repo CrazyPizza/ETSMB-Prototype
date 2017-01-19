@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716ccb1a26f4a4fc59c4bdc762a94abf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   paused: 0
   target: {fileID: 0}
   targetTag: NPC Enemy
@@ -282,8 +282,8 @@ MonoBehaviour:
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0.95
-  circleColor: {r: 0, g: 0, b: 1, a: 0.5}
-  pauseTime: 1
+  circleColor: {r: 0.86206913, g: 0, b: 1, a: 0.5}
+  pauseTime: 2
   reloadTime: 0.5
 --- !u!114 &114000010871505328
 MonoBehaviour:
@@ -350,7 +350,7 @@ MonoBehaviour:
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0.95
-  circleColor: {r: 0, g: 1, b: 0.42068958, a: 0.5}
+  circleColor: {r: 0.986207, g: 0, b: 1, a: 0.5}
   goTowardTarget: 1
   speed: 4
   stopAt: 2

@@ -17,10 +17,10 @@ public class PlayerLightsaber : MonoBehaviour {
     }
 
     void Update() {
-        if(saber && active && Input.GetKeyDown(key))
+        if (saber && active && Input.GetKeyDown(key))
             saber.active = !saber.active;
-        if(saber && active) {
-            if(Input.GetKeyDown(attack) && Physics.Raycast(this.transform.position,this.transform.forward,out obj,distance) && obj.collider.gameObject.tag == "NPC Enemy")
+        if (saber && active) {
+            if (Input.GetKeyDown(attack) && Physics.Raycast(this.transform.position, this.transform.forward, out obj, distance) && obj.collider.gameObject.tag == "NPC Enemy")
                 saber.attack(obj.collider.gameObject.transform);
         }
     }

@@ -16,10 +16,8 @@ public class UIController : MonoBehaviour {
 	private int allyCurrentHP=30;//Variabile che in ogni momento ha dentro gli HP dell'alleato valutato
 	public GameObject toastImage;//Riferimento al toast con immagine
 	public GameObject toastNormale;//Riferimento al toast normale
+	public GameObject currentWeaponPanel;//Riferimento al pannello con l'immagine dell'arma in uso
 
-    public Text weaponText;
-    private Text[] weaponsText;
-    public GameObject[] weaponsList;
 
 	void Awake() {
 		UI=this;
@@ -27,12 +25,13 @@ public class UIController : MonoBehaviour {
 
 	void Start () {
 		initialiseHealthBars();
-        initialiseWeapons();
+		if (player.GetComponent<PlayerBaster>().active == true) setCurrentWeaponGUI("Blaster");
+        if (player.GetComponent<PlayerLightsaber>().active == true) setCurrentWeaponGUI("Lightsaber");
 	}
 
 	void Update () {
 		updateHealthBars();
-       // updateWeapons();
+        if (player.GetComponent<PlayerGrenadeLauncer>().active == true) setCurrentWeaponGUI("GrenadeLauncher");
 	}
 
 	//
@@ -108,36 +107,30 @@ public class UIController : MonoBehaviour {
 		}
 	}
 
-    void initialiseWeapons() {
+	//
+	// GUI-CURRENT WEAPON
+	//
+	public void setCurrentWeaponGUI(string arma){
 
-        player = GameObject.FindWithTag("Player");
-        weaponsText = new Text[weaponsList.Length];
+		Text currentWeaponText=currentWeaponPanel.GetComponentsInChildren<Text>()[0];
+		Image currentWeaponImage=currentWeaponPanel.GetComponentsInChildren<Image>()[1];
 
-        for (int i=0; i < weaponsList.Length; i++) {
+		switch(arma){
+		case "Lightsaber":
+			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/LightsaberIcon");
+			currentWeaponText.text=arma + " : L (on/off) - O (attack)";
+			break;
+		case "GrenadeLauncher":
+			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/GrenadelauncherIcon");
+			currentWeaponText.text=arma + " : P";
+			break;
+		default://blaster
+			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/BlasterIcon");
+			currentWeaponText.text="Blaster : E";
+			break;
+		}
+	}
 
-            string weaponName = weaponsList[i].name;
-
-                switch (weaponName) {
-                    case "Blaster":
-                        weaponText.text = weaponName + " : RETURN";
-                        break;
-                    case "GrenadeLauncher":
-                        weaponText.text = weaponName + " : P";
-                        break;
-                    default:
-                        weaponText.text = "";
-                        break;
-           
-                }
-
-            weaponsText[i] = Instantiate(weaponText);
-            weaponsText[i].rectTransform.SetParent(mainCanvas.transform);
-            weaponsText[i].rectTransform.anchoredPosition = new Vector2(weaponText.rectTransform.anchoredPosition.x, 
-                weaponText.rectTransform.anchoredPosition.y - healthbarOffset);
-            healthbarOffset += 30;            
-        }
-
-    }
 }
 
 

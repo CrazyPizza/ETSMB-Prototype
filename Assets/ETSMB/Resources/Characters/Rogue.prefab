@@ -292,7 +292,7 @@ MonoBehaviour:
   needLineOfSight: 1
   heightOfSight: 0.95
   circleColor: {r: 1, g: 0, b: 0, a: 0.5}
-  pauseTime: 2
+  pauseTime: 1
   reloadTime: 0.5
 --- !u!114 &114000012067554568
 MonoBehaviour:

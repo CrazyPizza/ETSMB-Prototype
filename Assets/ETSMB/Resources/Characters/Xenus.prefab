@@ -225,10 +225,10 @@ MonoBehaviour:
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0.95
-  circleColor: {r: 0, g: 0, b: 1, a: 0.5}
+  circleColor: {r: 1, g: 0.6, b: 0, a: 0.5}
   goTowardTarget: 1
   speed: 4
-  stopAt: 8.5
+  stopAt: 4
 --- !u!114 &114000014022970892
 MonoBehaviour:
   m_ObjectHideFlags: 1

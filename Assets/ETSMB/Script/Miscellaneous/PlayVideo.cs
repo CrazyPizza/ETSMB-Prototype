@@ -8,19 +8,15 @@ using UnityEngine.SceneManagement;
 public class PlayVideo : MonoBehaviour {
 
     public MovieTexture movie;
-    private AudioSource audio;
 
 	void Start () {
         GetComponent<RawImage>().texture = movie as MovieTexture;
-        audio = GetComponent<AudioSource>();
-        audio.clip = movie.audioClip;
         movie.Play();
-        audio.Play();
         StartCoroutine("waitForMovieEnd");
     }
 
     IEnumerator waitForMovieEnd() {
-        while(movie.isPlaying) {
+        while (movie.isPlaying) {
             yield return new WaitForEndOfFrame();
         }
         onMovieEnded();

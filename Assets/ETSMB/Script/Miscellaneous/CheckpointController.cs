@@ -28,41 +28,39 @@ public class CheckpointController : MonoBehaviour {
 	void Update () {
 		//Se il player muore, resetta dal checkpoint attualmente attivo
 		playerHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
-        if(allySpecial != null) allySpecialHP = (int) allySpecial.GetComponent<StatsInfo>().HP;
-        if(allySpecial != null) {
-            if(playerHP <= 0 || allySpecialHP <= 0)
-                resetToCheckpoint();
+        if (allySpecial != null) allySpecialHP = (int) allySpecial.GetComponent<StatsInfo>().HP;
+        if (allySpecial != null) {
+            if (playerHP <= 0 || allySpecialHP <= 0) resetToCheckpoint();
         } else {
-            if(playerHP <= 0)
-                resetToCheckpoint();
+            if (playerHP <= 0) resetToCheckpoint();
         }
-
 	}
 
 	void resetToCheckpoint(){
 		GameObject activeCheckpointObj= checkpointList[this.activeCheckpoint];
-		//Posizione scomposta nelle 3 primitive per poter settare dopo la posizione corretta di respawn
-		float checkP_X =activeCheckpointObj.transform.position.x;
-		float checkP_Y =activeCheckpointObj.transform.position.y;
-		float checkP_Z =activeCheckpointObj.transform.position.z;
-		int offset=1;//Per non far respawnare gli alleati in testa ad altri alleati
-
-		//Reset della vita del player e riposizionamento al checkpoint
-		player.GetComponentInChildren<StatsInfo>().HP=initialHP;
+        //Posizione scomposta nelle 3 primitive per poter settare dopo la posizione corretta di respawn
+        float checkP_X = activeCheckpointObj.transform.position.x;
+        float checkP_Y = activeCheckpointObj.transform.position.y;
+        float checkP_Z = activeCheckpointObj.transform.position.z;
+		int offset=2;//Per non far respawnare gli alleati in testa ad altri alleati
+  
+        //Reset della vita del player e riposizionamento al checkpoint
+        player.GetComponentInChildren<StatsInfo>().HP = initialHP;
 		player.transform.position=activeCheckpointObj.transform.position;
         if (allySpecial != null) allySpecial.GetComponent<StatsInfo>().HP = allySpecialInitialHP;
+
 		//Riposizionamento di tutti gli alleati NON morti. Se sono morti sono null nel vettore e quindi li ignora
-		for(int i=0; i< alliesList.Length; i++){
-			if(alliesList[i]!=null){
-				alliesList[i].transform.position=new Vector3(checkP_X+offset, checkP_Y, checkP_Z);
+		for(int i=0; i< alliesList.Length; i++) {
+			if(alliesList[i]!=null) {
+				alliesList[i].transform.position=new Vector3(checkP_X+offset, checkP_Y, checkP_Z+offset);
 				offset++;
 			}
 		}
 	}
 
 	//Richiamato dai singoli checkpoint per impostare il checkpoint da cui respawnare
-	public void setActiveCheckpoint(int checkpointNum){
+	public void setActiveCheckpoint(int checkpointNum) {
 		this.activeCheckpoint=checkpointNum;
-		Debug.Log("attivato il checkpoint "+this.activeCheckpoint);
+		Debug.Log("attivato il checkpoint " + this.activeCheckpoint);
 	}
 }

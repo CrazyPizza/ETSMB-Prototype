@@ -111,7 +111,7 @@ MonoBehaviour:
   paused: 0
   target: {fileID: 0}
   targetTag: Player
-  sensingRange: 1.5
+  sensingRange: 1
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   flareRadius: 5
   flareTime: 1.5
   pushForce: 10
-  pushOnlyTarget: 0
+  pushOnlyTarget: 1
   centerColor: {r: 1, g: 0, b: 0, a: 1}
   borderColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!212 &212000013365344550
