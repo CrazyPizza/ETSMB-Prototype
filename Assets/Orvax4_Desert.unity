@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692528, g: 0.4967872, b: 0.5750856, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692522, g: 0.4967867, b: 0.57508475, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -8584,22 +8584,22 @@ Prefab:
         type: 2}
       propertyPath: alliesList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1969097597}
     - target: {fileID: 114000012746375604, guid: 24dffc561255d954bb9090335f5fbe10,
         type: 2}
       propertyPath: alliesList.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2102438852}
     - target: {fileID: 114000012746375604, guid: 24dffc561255d954bb9090335f5fbe10,
         type: 2}
       propertyPath: alliesList.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1525130142}
     - target: {fileID: 114000012746375604, guid: 24dffc561255d954bb9090335f5fbe10,
         type: 2}
       propertyPath: alliesList.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1475033708}
     - target: {fileID: 114000012746375604, guid: 24dffc561255d954bb9090335f5fbe10,
         type: 2}
       propertyPath: toastImage
@@ -19773,6 +19773,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011694538364, guid: 46d1b01c8ee0b264da417a6772c1c147, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d1b01c8ee0b264da417a6772c1c147, type: 2}
   m_IsPrefabParent: 0
@@ -20451,9 +20455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683825f826db77c40a91633a00301730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  key: 108
-  attack: 111
 --- !u!114 &1519980264
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class UIController : MonoBehaviour {
 	void Start () {
 		initialiseHealthBars();
 		if (player.GetComponent<PlayerBaster>().active == true) setCurrentWeaponGUI("Blaster");
-        if (player.GetComponent<PlayerLightsaber>().active == true) setCurrentWeaponGUI("Lightsaber");
+        //if (player.GetComponent<PlayerLightsaber>().active == true) setCurrentWeaponGUI("Lightsaber");
 	}
 
 	void Update () {

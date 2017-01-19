@@ -13,7 +13,7 @@ public class CheckpointController : MonoBehaviour {
 	private int playerHP=0;
 	private int initialHP=0;
     private int allySpecialHP = 0;
-    private int allySpecialInitialHP = 0;
+    private int allySpecialInitialHP = 30;
 
 	void Start () {
 		//Prende le posizioni di partenza dei nemici, usate per resettarli nel loro punto originario
