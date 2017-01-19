@@ -15,7 +15,7 @@ public class BoxManager : MonoBehaviour {
 		Debug.Log ("Random Dex: " + i);
 		Debug.Log ("Fail: " + fail);
 
-		Award award = new Award ();
+		Award award = new Award();
 
 		switch (box.name) {
 			case "Box 1":

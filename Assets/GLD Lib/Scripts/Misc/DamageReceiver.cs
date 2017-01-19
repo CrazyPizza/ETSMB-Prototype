@@ -7,14 +7,13 @@ public class DamageReceiver : MonoBehaviour {
 	public bool active = true;
 
 	private StatsInfo si;
-
-	void Start() {
+   	void Start() {
 		si = GetComponentInChildren<StatsInfo> ();
 	}
 
 	public void ReceiveDamage(StatsInfo attacker, int i) {
 		if (active && si != null) {
-			Debug.Log ("Attacker: " + attacker);
+            Debug.Log ("Attacker: " + attacker);
 			Debug.Log ("Thac0: " + attacker.THAC0);
 			Debug.Log ("AC: " + si.AC);
 			Debug.Log ("Valore atteso dado: " + i);
@@ -23,7 +22,6 @@ public class DamageReceiver : MonoBehaviour {
 			float dmg = i * probabilityHit;
 			Debug.Log ("Danno finale: " + dmg);
 			si.HP = si.HP - dmg;
-
 			if (si.HP <= 0) {
                 if(si.name == "Player" || si.name == "Xenus") {
                     // ci pensa il checkpoint controller
@@ -33,9 +31,8 @@ public class DamageReceiver : MonoBehaviour {
                 } else {
                     Destroy(si.gameObject);
                 }
-			}
-
-		}
+			} 
+        }
 	}
 
     IEnumerator MercenaryStun(GameObject obj) {

@@ -23,6 +23,7 @@ GameObject:
   - 114: {fileID: 114000014022970892}
   - 114: {fileID: 114000014148013114}
   - 114: {fileID: 114000011615908202}
+  - 114: {fileID: 114000010398322730}
   m_Layer: 0
   m_Name: Xenus
   m_TagString: NPC Ally
@@ -88,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011694538364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9025159, y: 0.01, z: 4.63015}
+  m_LocalPosition: {x: -7.473, y: 0.01, z: -2.434}
   m_LocalScale: {x: 0.6, y: 1.7, z: 0.6}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -194,6 +195,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &114000010398322730
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011694538364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdd4a08286948a7bc5a225b574ef14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
 --- !u!114 &114000011190211804
 MonoBehaviour:
   m_ObjectHideFlags: 1

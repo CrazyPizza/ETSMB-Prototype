@@ -8,19 +8,19 @@ public class Award {
 	public void GiveAward1(bool fail) {
         if(fail == false) {
             player.GetComponentInChildren<StatsInfo>().HP += (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
-            UIController.UI.showImageToast("SUCCESS","You founded a potion, +20% HP","potionIcon",4);
+            UIController.UI.showImageToast("SUCCESS","You founded a potion, +20% HP","PotionIcon",4);
         } else {
             player.GetComponentInChildren<StatsInfo>().HP -= (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
-            UIController.UI.showImageToast("FAIL","A snake bit you, -20% HP","snakeIcon",4);
+            UIController.UI.showImageToast("FAIL","A snake bit you, -20% HP","SnakeIcon",4);
         }
 	}
 
 	public void GiveAward2(bool fail) {
         if(fail == false) {
             player.GetComponentInChildren<StatsInfo>().HP += (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
-            UIController.UI.showImageToast("SUCCESS","You founded a potion, +20% HP","potionIcon",4);
+            UIController.UI.showImageToast("SUCCESS","You founded a potion, +20% HP","PotionIcon",4);
         } else {
-            UIController.UI.showImageToast("FAIL","The box stay locked permanently","lockIcon",4);
+            UIController.UI.showImageToast("FAIL","The box stay locked permanently","LockIcon",4);
         }
     }
 
@@ -30,17 +30,17 @@ public class Award {
             UIController.UI.showImageToast("SUCCESS", "You founded a grenade launcher", "GrenadelauncherIcon", 4);
         } else {
             player.GetComponentInChildren<StatsInfo>().HP -= (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
-            UIController.UI.showImageToast("FAIL", "Some rocks fall and hit the box", "rockIcon", 4);
+            UIController.UI.showImageToast("FAIL", "Some rocks fall and hit the box", "RockIcon", 4);
         }
 	}
 
 	public void GiveAward4(bool fail) {
         if(fail == false) {
             player.GetComponentInChildren<PlayerGrenadeLauncer>().addGranade(1);
-            UIController.UI.showImageToast("SUCCESS","You founded 1 grenade extra","grenadeIcon",4);
+            UIController.UI.showImageToast("SUCCESS","You founded 1 grenade extra","GrenadeIcon",4);
         } else {
             player.GetComponentInChildren<StatsInfo>().HP -= (player.GetComponentInChildren<StatsInfo>().HP * 0.2F);
-            UIController.UI.showImageToast("FAIL","Some rocks fall and hit the box","rockIcon",4);
+            UIController.UI.showImageToast("FAIL","Some rocks fall and hit the box","RockIcon",4);
         }
     }
 
