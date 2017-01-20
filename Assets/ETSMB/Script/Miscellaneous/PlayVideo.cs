@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayVideo : MonoBehaviour {
 
     public MovieTexture movie;
+    public string nextScene;
 
 	void Start () {
         GetComponent<RawImage>().texture = movie as MovieTexture;
@@ -23,8 +24,7 @@ public class PlayVideo : MonoBehaviour {
     }
 
     void onMovieEnded() {
-        Debug.Log("Movie ended");
-        SceneManager.LoadScene("ProvaCombattimento");
+        SceneManager.LoadScene(nextScene);
     }
 
 }

@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Orvax4_Desert.unity
   - enabled: 1
-    path: Assets/ProvaVideo.unity
+    path: Assets/SceneVideoTheCity.unity
   - enabled: 1
-    path: Assets/ProvaCombattimento.unity
+    path: Assets/Orvax4_City.unity
