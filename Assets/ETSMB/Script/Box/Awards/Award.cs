@@ -45,10 +45,18 @@ public class Award {
     }
 
 	public void GiveAward5(bool fail) {
-		Debug.Log ("Award 5");
+		if (fail == false) {
+            //toast successo
+        } else {
+            //toast insuccesso
+        }
 	}
 
 	public void GiveAward6(bool fail) {
 		Debug.Log ("Award 6");
 	}
+
+    public void GiveAward7(bool fail) {
+        Debug.Log("Award 7");
+    }
 }
