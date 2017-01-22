@@ -17,7 +17,9 @@ public class UIController : MonoBehaviour {
 	public GameObject toastImage;//Riferimento al toast con immagine
 	public GameObject toastNormale;//Riferimento al toast normale
 	public GameObject currentWeaponPanel;//Riferimento al pannello con l'immagine dell'arma in uso
-
+	public GameObject grenadePanel;
+	public GameObject lightsaberPanel;
+	public GameObject blasterPanel;
 
 	void Awake() {
 		UI=this;
