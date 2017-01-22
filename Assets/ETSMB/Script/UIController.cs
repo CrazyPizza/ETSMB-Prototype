@@ -27,13 +27,15 @@ public class UIController : MonoBehaviour {
 
 	void Start () {
 		initialiseHealthBars();
-		if (player.GetComponent<PlayerBaster>().active == true) setCurrentWeaponGUI("Blaster");
-        //if (player.GetComponent<PlayerLightsaber>().active == true) setCurrentWeaponGUI("Lightsaber");
+		PlayerBaster blaster=player.GetComponent<PlayerBaster>();
+		if (blaster!=null && blaster.active == true)
+			setCurrentWeaponGUI("Blaster");
+		else
+			setCurrentWeaponGUI("Lightsaber");
 	}
 
 	void Update () {
 		updateHealthBars();
-        if (player.GetComponent<PlayerGrenadeLauncer>().active == true) setCurrentWeaponGUI("GrenadeLauncher");
 	}
 
 	//
@@ -128,7 +130,7 @@ public class UIController : MonoBehaviour {
 			break;
 		default://blaster
 			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/BlasterIcon");
-			currentWeaponText.text="Blaster : E";
+			currentWeaponText.text="Blaster : Enter";
 			break;
 		}
 	}

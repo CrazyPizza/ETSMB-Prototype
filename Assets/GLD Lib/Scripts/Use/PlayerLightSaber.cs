@@ -17,13 +17,23 @@ public class PlayerLightSaber : MonoBehaviour {
     }
 
     void Update() {
-        if (saber && active && Input.GetKeyDown(key))
-            saber.active = !saber.active;
+		if (saber && active && Input.GetKeyDown(key)){
+			UIController.UI.setCurrentWeaponGUI("Lightsaber");
+			saber.active = !saber.active;
+		}
         if (saber && active) {
-            if (Input.GetKeyDown(attack) && Physics.Raycast(this.transform.position, this.transform.forward, out obj, distance) && obj.collider.gameObject.tag == "NPC Enemy") {
+            /*if (Input.GetKeyDown(attack) && Physics.Raycast(this.transform.position, this.transform.forward, out obj, distance) && obj.collider.gameObject.tag == "NPC Enemy") {
                 saber.attack(obj.collider.gameObject.transform);
                 Debug.Log(obj.collider.gameObject.transform);
-            }
+            }*/
+			if (Input.GetKeyDown(attack)) {
+				Debug.Log("ATTACCO");
+				saber.attack();
+			}
+
+
+
         }
     }
+
 }

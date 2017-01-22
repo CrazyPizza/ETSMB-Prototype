@@ -12,6 +12,7 @@ public class PlayerGrenadeLauncer : MonoBehaviour {
 
 	void Start () {
 		pfg = GetComponentInChildren<ParabolicFireGenerator> ();
+		UIController.UI.setCurrentWeaponGUI("GrenadeLauncher");
 	}
 	
 	void Update () {

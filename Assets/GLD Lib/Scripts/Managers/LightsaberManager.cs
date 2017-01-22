@@ -5,7 +5,7 @@ public class LightsaberManager : MonoBehaviour {
 
 	public bool active = false;
 	private bool previous = false;
-
+	public Transform currentTarget=null;
 	private LineRenderer line;
 	private CapsuleCollider cc;
 	private Light l;
@@ -28,7 +28,24 @@ public class LightsaberManager : MonoBehaviour {
         }
     }
 
-    public void attack(Transform t) {
-        dp.ProvideDamage(t);
+    public void attack() {
+		if(currentTarget != null){
+			Debug.Log("SONO: "+currentTarget.gameObject.name);
+			dp.ProvideDamage(currentTarget);
+		}else{
+			Debug.Log("Nessun Target");
+		}
     }
+
+	private void OnTriggerEnter(Collider other){
+		
+		if(other.gameObject.tag == "NPC Enemy"){
+			currentTarget=other.gameObject.transform;
+			Debug.Log(currentTarget.name);
+		}
+	}
+
+	private void OnTriggerExit(Collider other){
+		currentTarget=null;
+	}
 }
