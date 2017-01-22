@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerLightsaber : MonoBehaviour {
+public class PlayerLightSaber : MonoBehaviour {
 
     public bool active = true;
     public KeyCode key = KeyCode.L;
@@ -20,8 +20,10 @@ public class PlayerLightsaber : MonoBehaviour {
         if (saber && active && Input.GetKeyDown(key))
             saber.active = !saber.active;
         if (saber && active) {
-            if (Input.GetKeyDown(attack) && Physics.Raycast(this.transform.position, this.transform.forward, out obj, distance) && obj.collider.gameObject.tag == "NPC Enemy")
+            if (Input.GetKeyDown(attack) && Physics.Raycast(this.transform.position, this.transform.forward, out obj, distance) && obj.collider.gameObject.tag == "NPC Enemy") {
                 saber.attack(obj.collider.gameObject.transform);
+                Debug.Log(obj.collider.gameObject.transform);
+            }
         }
     }
 }
