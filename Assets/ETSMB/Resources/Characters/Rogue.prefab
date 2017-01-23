@@ -95,7 +95,7 @@ GameObject:
   - 136: {fileID: 136000012988253612}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: NPC Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
