@@ -285,7 +285,7 @@ MonoBehaviour:
   AC: 4
   THAC0: 9
   Bonus: 0
-  showCallout: 1
+  showCallout: 0
 --- !u!114 &114000011891125314
 MonoBehaviour:
   m_ObjectHideFlags: 1
