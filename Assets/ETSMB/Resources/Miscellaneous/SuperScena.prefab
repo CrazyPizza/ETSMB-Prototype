@@ -22857,6 +22857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
+  currentTarget: {fileID: 0}
 --- !u!114 &114000012503540170
 MonoBehaviour:
   m_ObjectHideFlags: 1

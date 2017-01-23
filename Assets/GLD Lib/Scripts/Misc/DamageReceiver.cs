@@ -13,7 +13,6 @@ public class DamageReceiver : MonoBehaviour {
 
 	public void ReceiveDamage(StatsInfo attacker, int i) {
 		if (active && si != null) {
-			Debug.Log("SONO: "+this.gameObject.transform.root.name+" e ho ricevuto");
            /* Debug.Log ("Attacker: " + attacker);
 			Debug.Log ("Thac0: " + attacker.THAC0);
 			Debug.Log ("AC: " + si.AC);
