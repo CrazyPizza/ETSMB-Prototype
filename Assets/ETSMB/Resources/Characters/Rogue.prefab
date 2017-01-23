@@ -25,6 +25,7 @@ GameObject:
   - 114: {fileID: 114000011622998900}
   - 114: {fileID: 114000010128911646}
   - 114: {fileID: 114000010388283828}
+  - 114: {fileID: 114000013673798766}
   m_Layer: 0
   m_Name: Rogue
   m_TagString: NPC Enemy
@@ -331,6 +332,23 @@ MonoBehaviour:
   ammo: {fileID: 4000010761898532, guid: f0b104de49e1a403c96a15d03be6d8e0, type: 2}
   speed: 75
   stats: {fileID: 114000012067554568}
+--- !u!114 &114000013673798766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010647313298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24498afb647cc435389c8ff5bc28fc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  paused: 0
+  lookTarget: 1
+  loop: 1
+  speed: 2
+  rallyPoints: []
 --- !u!114 &114000014283296176
 MonoBehaviour:
   m_ObjectHideFlags: 1

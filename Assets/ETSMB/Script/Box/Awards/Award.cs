@@ -46,7 +46,7 @@ public class Award {
 
 	public void GiveAward5(bool fail) {
 		if (fail == false) {
-			UIController.UI.showImageToast("SUCCESS","You found 10 credits","GrenadeIcon",3);
+			UIController.UI.showImageToast("SUCCESS","You found 10 credits","CoinIcon",3);
         } else {
 			UIController.UI.showImageToast("FAIL","The box was empty","LockIcon",3);
         }

@@ -24,7 +24,10 @@ public class PlayVideo : MonoBehaviour {
     }
 
     void onMovieEnded() {
-        SceneManager.LoadScene(nextScene);
+        if (nextScene == "FINE")
+            Application.Quit();
+        else
+            SceneManager.LoadScene(nextScene);
     }
 
 }

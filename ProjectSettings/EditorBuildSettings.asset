@@ -8,6 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Orvax4_Desert.unity
   - enabled: 1
-    path: Assets/SceneVideoTheCity.unity
-  - enabled: 1
     path: Assets/Orvax4_City.unity
+  - enabled: 1
+    path: Assets/Orvax4_Run.unity
+  - enabled: 1
+    path: Assets/SceneVideoOrvax4CityStart.unity
+  - enabled: 1
+    path: Assets/SceneVideoOrvax4RunEnd.unity
+  - enabled: 1
+    path: Assets/SceneVideoOrvax4RunStart.unity
+  - enabled: 1
+    path: Assets/SceneVideoOrvax4SubquestEnd.unity
+  - enabled: 1
+    path: Assets/SceneVideoOrvax4SubquestStart.unity

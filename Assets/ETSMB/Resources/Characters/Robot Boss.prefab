@@ -92,6 +92,7 @@ GameObject:
   - 114: {fileID: 114000011285284864}
   - 114: {fileID: 114000011810624568}
   - 114: {fileID: 114000014080395062}
+  - 114: {fileID: 114000012232311696}
   m_Layer: 0
   m_Name: Robot Boss
   m_TagString: NPC Enemy
@@ -282,6 +283,23 @@ MonoBehaviour:
   circleColor: {r: 0.94482756, g: 1, b: 0, a: 0.5}
   pauseTime: 3
   reloadTime: 0.5
+--- !u!114 &114000012232311696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012562154386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24498afb647cc435389c8ff5bc28fc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  paused: 0
+  lookTarget: 0
+  loop: 1
+  speed: 2
+  rallyPoints: []
 --- !u!114 &114000013644540708
 MonoBehaviour:
   m_ObjectHideFlags: 1
