@@ -29,9 +29,11 @@ public class DamageReceiver : MonoBehaviour {
                 } else if(si.name == "Mercenary Brute") {
                     Debug.Log("Mercenario stordito");
                     StartCoroutine(MercenaryStun(si.gameObject));
-                } else {
-                    Destroy(si.gameObject);
-                }
+				} else if(si.name=="Noirah") {
+					si.HP=5;
+				}else{
+					Destroy(si.gameObject);
+				}
 			} 
         }
 	}
