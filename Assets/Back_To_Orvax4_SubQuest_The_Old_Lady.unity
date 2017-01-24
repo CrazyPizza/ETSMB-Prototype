@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37356448, g: 0.3811204, b: 0.35887685, a: 1}
+  m_IndirectSpecularColor: {r: 0.37356418, g: 0.38112003, b: 0.35887662, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -23961,7 +23961,7 @@ Prefab:
     - target: {fileID: 114000011391548624, guid: 30ce4caa5d1343a48b9940fbe74275df,
         type: 2}
       propertyPath: nameScene
-      value: SceneVideoOrvax4SubquestEnd
+      value: Back_To_Orvax4_Video_Subquest_End
       objectReference: {fileID: 0}
     - target: {fileID: 4000013760384328, guid: 30ce4caa5d1343a48b9940fbe74275df, type: 2}
       propertyPath: m_LocalScale.x

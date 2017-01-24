@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692528, g: 0.4967872, b: 0.5750856, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -256,6 +256,11 @@ Prefab:
       value: 
       objectReference: {fileID: 15200000, guid: f37ddc274a1550a4b9fd1db9257484c8,
         type: 3}
+    - target: {fileID: 114000010782099592, guid: 26ea2db328b1f254585ee05d94869370,
+        type: 2}
+      propertyPath: nextScene
+      value: Back_To_Orvax4_SubQuest_The_Old_Lady
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26ea2db328b1f254585ee05d94869370, type: 2}
   m_IsPrefabParent: 0

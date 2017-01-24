@@ -10,10 +10,10 @@ public class CheckpointController : MonoBehaviour {
     public GameObject allySpecial; // Nel caso ci sia un alleato speciale come nella parte iniziale
 	public GameObject player; //Riferimento al player
 	public int activeCheckpoint=0; //Public per un controllo veloce nell'inspector
-	private int playerHP=0;
-	private int initialHP=0;
+	private int playerHP=0; //Vita del giocatore da controllare
+	private int initialHP=0; // Nuova vita assegnata quando il giocatore muore
     private int allySpecialHP = 0;
-    private int allySpecialInitialHP = 30;
+    private int allySpecialInitialHP = 0;
 
 	void Start() {
 		//Prende le posizioni di partenza dei nemici, usate per resettarli nel loro punto originario
@@ -58,8 +58,11 @@ public class CheckpointController : MonoBehaviour {
 		}
 	}
 
-	//Richiamato dai singoli checkpoint per impostare il checkpoint da cui respawnare
-	public void setActiveCheckpoint(int checkpointNum) {
+    //Richiamato dai singoli checkpoint per impostare il checkpoint da cui respawnare
+    public void setActiveCheckpoint(int checkpointNum) {
         this.activeCheckpoint = checkpointNum;
-	}
+        initialHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
+        if (allySpecial != null)
+            allySpecialInitialHP = (int) allySpecial.GetComponentInChildren<StatsInfo>().HP;
+    }
 }

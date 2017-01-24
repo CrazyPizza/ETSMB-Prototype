@@ -24,6 +24,7 @@ GameObject:
   - 114: {fileID: 114000014148013114}
   - 114: {fileID: 114000011615908202}
   - 114: {fileID: 114000010398322730}
+  - 114: {fileID: 114000010899882328}
   m_Layer: 0
   m_Name: Xenus
   m_TagString: NPC Ally
@@ -207,6 +208,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
+--- !u!114 &114000010899882328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011694538364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98281fc5af45842cd972240640b78605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  paused: 0
+  target: {fileID: 0}
+  targetTag: NPC Ally
+  sensingRange: 10
+  reactionTime: 0
+  needLineOfSight: 1
+  heightOfSight: 0.95
+  circleColor: {r: 1, g: 0.5586207, b: 0, a: 0.5}
+  goTowardTarget: 1
+  speed: 4
+  stopAt: 4
 --- !u!114 &114000011190211804
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -11,9 +11,9 @@ public class SubquestStarter : MonoBehaviour {
 	void Update () {
 		if(playerInRange && Input.GetKeyDown(key)){
 			if(this.gameObject.tag=="NPC Witch")
-				SceneManager.LoadScene("SceneVideoOrvax4SubquestStart"); //VAI ALLA SUBQUEST
+				SceneManager.LoadScene("Back_To_Orvax4_Video_Subquest_Start"); //VAI ALLA SUBQUEST
 			else if(this.gameObject.tag=="Go To Run")
-				SceneManager.LoadScene("SceneVideoOrvax4RunStart"); //VAI ALLA RUN
+				SceneManager.LoadScene("Back_To_Orvax4_Video_Run_Start"); //VAI ALLA RUN
 		}
 	}
 

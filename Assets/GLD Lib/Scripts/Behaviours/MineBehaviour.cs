@@ -18,15 +18,15 @@ public class MineBehaviour : _VigilantBehaviour {
 		ExplosionGenerator eg = GetComponent<ExplosionGenerator> ();
         GroundTrapDamage gtp = GetComponent<GroundTrapDamage>();
         if (gtp != null && eg != null)
-		    if (gtp.Disarm(t)) eg.Detonate (t);
+		    if (!gtp.Disarm(t)) eg.Detonate (t);
 		active = false;
 	}
 
 	public void Reload() {
 		if (!active) {
-			active = true;
-			ExplosionGenerator eg = GetComponent<ExplosionGenerator> ();
-			if (eg != null) eg.active = true;
+            active = true;
+            ExplosionGenerator eg = GetComponent<ExplosionGenerator>();
+            if (eg != null) eg.active = true;
 		}
 	}
 
