@@ -74,6 +74,8 @@ GameObject:
   - 114: {fileID: 114000013730468416}
   - 114: {fileID: 114000012440271368}
   - 114: {fileID: 114000010618532462}
+  - 114: {fileID: 114000010376014402}
+  - 114: {fileID: 114000012847795198}
   m_Layer: 0
   m_Name: Dianoga
   m_TagString: NPC Enemy
@@ -224,6 +226,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &114000010376014402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013974574428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bdd4a08286948a7bc5a225b574ef14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
 --- !u!114 &114000010618532462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,6 +309,23 @@ MonoBehaviour:
   THAC0: 10
   Bonus: 0
   showCallout: 0
+--- !u!114 &114000012847795198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013974574428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24498afb647cc435389c8ff5bc28fc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  paused: 0
+  lookTarget: 1
+  loop: 1
+  speed: 2
+  rallyPoints: []
 --- !u!114 &114000013730468416
 MonoBehaviour:
   m_ObjectHideFlags: 1
