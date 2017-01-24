@@ -44,6 +44,7 @@ public class DoorManager : _VigilantBehaviour {
 		if (!openOnClick) {
 			pm.Close (closingTime);
 			ignorePresence = false;
+
 		}
 	}
 
@@ -61,10 +62,12 @@ public class DoorManager : _VigilantBehaviour {
 			else if (stayOpenFor > 0f) {
 				timeout = Time.time + stayOpenFor;
 				ignorePresence = true;
+
 			}
 		} else if (pm.status == DoorPanelStatus.CLOSE) {
 			if (keepShutAfter)
 				active = false;
+
 		}
 	}
 		
