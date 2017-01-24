@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44018516, g: 0.48868042, b: 0.5688053, a: 1}
+  m_IndirectSpecularColor: {r: 0.4401852, g: 0.48868042, b: 0.56880534, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -10376,7 +10376,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012509905058, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 1000011303918358, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_Name
@@ -11153,7 +11153,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010527443052, guid: 0b4338d1bfb823349af30c48d76c3645, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 1000012649646512, guid: 0b4338d1bfb823349af30c48d76c3645, type: 2}
       propertyPath: m_Name
@@ -13169,7 +13169,7 @@ Transform:
   - {fileID: 1888212655}
   - {fileID: 379324620}
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
 --- !u!114 &839848407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14261,7 +14261,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012509905058, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 1000011303918358, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_Name
@@ -16357,7 +16357,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012509905058, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1000011303918358, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_Name
@@ -18848,7 +18848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012509905058, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 1000011303918358, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_Name
@@ -22739,7 +22739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012509905058, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 1000011303918358, guid: 2762260d48579cf4791120cde28a65f2, type: 2}
       propertyPath: m_Name
@@ -23573,7 +23573,7 @@ MonoBehaviour:
   paused: 0
   target: {fileID: 0}
   targetTag: NPC Ally
-  sensingRange: 3
+  sensingRange: 19
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0.95
@@ -23596,7 +23596,7 @@ MonoBehaviour:
   paused: 0
   target: {fileID: 0}
   targetTag: Player
-  sensingRange: 3
+  sensingRange: 19
   reactionTime: 1
   needLineOfSight: 1
   heightOfSight: 0.95
@@ -23858,7 +23858,7 @@ Transform:
   - {fileID: 26178827}
   - {fileID: 545884884}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!1 &1573758390
 GameObject:
   m_ObjectHideFlags: 0
@@ -29070,6 +29070,11 @@ Prefab:
     - target: {fileID: 4000011187005560, guid: b9cd14b24fe20204eb8524fc02098967, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012474576770, guid: b9cd14b24fe20204eb8524fc02098967,
+        type: 2}
+      propertyPath: sensingRange
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9cd14b24fe20204eb8524fc02098967, type: 2}
