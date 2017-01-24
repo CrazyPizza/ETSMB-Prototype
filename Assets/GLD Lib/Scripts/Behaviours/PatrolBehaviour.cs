@@ -30,12 +30,6 @@ public class PatrolBehaviour : MonoBehaviour {
 				} else {
 					transform.Translate ((rallyPoints [current].position - transform.position).normalized * (speed * Time.deltaTime));
 				}
-/* // why the @$#% this is not working ?
-				if (lookNext) transform.LookAt (references [current]);
-				transform.Translate ((references [current].position - transform.position).normalized * (speed * Time.deltaTime));
-				if (lookNext) transform.LookAt (new Vector3 (references [current].position.x, transform.position.y, references [current].position.z));
-*/
-
 			} else {
 				current = ((current + 1) % rallyPoints.Length);
 				if (!loop && current == 0)

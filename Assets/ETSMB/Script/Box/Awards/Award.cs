@@ -53,10 +53,11 @@ public class Award {
 	}
 
 	public void GiveAward6(bool fail) {
-		Debug.Log ("Award 6");
-	}
-
-    public void GiveAward7(bool fail) {
-        Debug.Log("Award 7");
+        if (fail == false) {
+            player.GetComponentInChildren<StatsInfo>().HP += (player.GetComponentInChildren<StatsInfo>().HP * 0.35F);
+            UIController.UI.showImageToast("SUCCESS", "You found a potion, +35% HP", "PotionIcon", 4);
+        } else {
+            UIController.UI.showImageToast("FAIL", "The box stay locked permanently", "LockIcon", 4);
+        }
     }
 }

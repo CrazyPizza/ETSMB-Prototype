@@ -17,9 +17,6 @@ public class UIController : MonoBehaviour {
 	public GameObject toastImage;//Riferimento al toast con immagine
 	public GameObject toastNormale;//Riferimento al toast normale
 	public GameObject currentWeaponPanel;//Riferimento al pannello con l'immagine dell'arma in uso
-	public GameObject grenadePanel;
-	public GameObject lightsaberPanel;
-	public GameObject blasterPanel;
 
 	void Awake() {
 		UI=this;
@@ -27,8 +24,8 @@ public class UIController : MonoBehaviour {
 
 	void Start () {
 		initialiseHealthBars();
-		PlayerBaster blaster=player.GetComponent<PlayerBaster>();
-		if (blaster!=null && blaster.active == true)
+		PlayerBaster blaster = player.GetComponent<PlayerBaster>();
+		if (blaster !=null && blaster.active == true)
 			setCurrentWeaponGUI("Blaster");
 		else
 			setCurrentWeaponGUI("Lightsaber");
@@ -74,8 +71,6 @@ public class UIController : MonoBehaviour {
 		//CHIUDI IL TOAST TRA timeout SECONDI
 		Invoke("hideToast", timeout);
 	}
-
-
 
 	//
 	// GUI-HEALTH BARS
@@ -123,10 +118,6 @@ public class UIController : MonoBehaviour {
 		case "Lightsaber":
 			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/LightsaberIcon");
 			currentWeaponText.text=arma + " : L (on/off) - O (attack)";
-			break;
-		case "GrenadeLauncher":
-			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/GrenadelauncherIcon");
-			currentWeaponText.text=arma + " : P";
 			break;
 		default://blaster
 			currentWeaponImage.sprite=Resources.Load<Sprite>("UIAssets/BlasterIcon");

@@ -14,8 +14,7 @@ public class Checkpoint : MonoBehaviour {
 		//Il controllo viene fatto sul tag del collider di Jennir, PlayerBody, per evitare
 		//che qualsiasi collider che entra nel checkpoint lo attivi
 
-		if (collider.CompareTag("PlayerBody")){
-			Debug.Log("entrato jennir");
+		if (collider.CompareTag("PlayerBody")) {
 			controller.setActiveCheckpoint(CheckpointNumber);
 		}
 	}

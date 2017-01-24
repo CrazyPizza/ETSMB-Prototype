@@ -33,9 +33,6 @@ public class BoxManager : MonoBehaviour {
 			case "Box 6":
 				award.GiveAward6(fail);
 				break;
-            case "Box 7":
-                award.GiveAward7(fail);
-                break;
 		}
 	}
 }

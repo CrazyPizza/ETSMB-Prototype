@@ -15,17 +15,16 @@ public class CheckpointController : MonoBehaviour {
     private int allySpecialHP = 0;
     private int allySpecialInitialHP = 30;
 
-	void Start () {
+	void Start() {
 		//Prende le posizioni di partenza dei nemici, usate per resettarli nel loro punto originario
-		//NON ANCORA IMPLEMENTATO
 		initialHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
 		enemiesPositions=new Transform[enemiesList.Length];
-		for(int i=0; i< enemiesList.Length; i++){
+		for(int i=0; i< enemiesList.Length; i++) {
 			enemiesPositions[i]=enemiesList[i].transform;
 		}
 	}
 
-	void Update () {
+	void Update() {
 		//Se il player muore, resetta dal checkpoint attualmente attivo
 		playerHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
         if (allySpecial != null) allySpecialHP = (int) allySpecial.GetComponent<StatsInfo>().HP;
@@ -36,7 +35,8 @@ public class CheckpointController : MonoBehaviour {
         }
 	}
 
-	void resetToCheckpoint(){
+	void resetToCheckpoint() {
+
 		GameObject activeCheckpointObj= checkpointList[this.activeCheckpoint];
         //Posizione scomposta nelle 3 primitive per poter settare dopo la posizione corretta di respawn
         float checkP_X = activeCheckpointObj.transform.position.x;
@@ -60,7 +60,6 @@ public class CheckpointController : MonoBehaviour {
 
 	//Richiamato dai singoli checkpoint per impostare il checkpoint da cui respawnare
 	public void setActiveCheckpoint(int checkpointNum) {
-		this.activeCheckpoint=checkpointNum;
-		Debug.Log("attivato il checkpoint " + this.activeCheckpoint);
+        this.activeCheckpoint = checkpointNum;
 	}
 }

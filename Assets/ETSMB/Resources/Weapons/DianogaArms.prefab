@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012718650766}
+  m_RootGameObject: {fileID: 1000012834945214}
   m_IsPrefabParent: 1
---- !u!1 &1000012718650766
+--- !u!1 &1000012834945214
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000013159421508}
-  - 114: {fileID: 114000012645203518}
+  - 4: {fileID: 4000012870110514}
+  - 114: {fileID: 114000013623388846}
   m_Layer: 0
-  m_Name: BlasterHeavy
-  m_TagString: Untagged
+  m_Name: DianogaArms
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000013159421508
+--- !u!4 &4000012870110514
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012718650766}
+  m_GameObject: {fileID: 1000012834945214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6, y: 0.7, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,17 +40,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000012645203518
+--- !u!114 &114000013623388846
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012718650766}
+  m_GameObject: {fileID: 1000012834945214}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b163b32c49894277902da932b658352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 4000010743780102, guid: c75199f0de1b13f48a4593101e10dc46, type: 2}
+  ammo: {fileID: 4000012059172730, guid: 420e8a1fa6b3ade4b93c3522205c31b1, type: 2}
   speed: 75
   stats: {fileID: 0}

@@ -45,6 +45,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000011028496322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013737315692}
+  - 114: {fileID: 114000011939169614}
+  m_Layer: 0
+  m_Name: DianogaArms
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000011575034156
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,22 +99,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000014089754650
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000012259276380}
-  - 114: {fileID: 114000012297337962}
-  m_Layer: 0
-  m_Name: Blaster
-  m_TagString: Weapon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!4 &4000011012915164
 Transform:
   m_ObjectHideFlags: 1
@@ -126,19 +126,6 @@ Transform:
   - {fileID: 4000012702382024}
   m_Father: {fileID: 4000013555783750}
   m_RootOrder: 0
---- !u!4 &4000012259276380
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014089754650}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0.7, z: 0.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000013555783750}
-  m_RootOrder: 2
 --- !u!4 &4000012702382024
 Transform:
   m_ObjectHideFlags: 1
@@ -159,15 +146,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013974574428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.454354, y: 0.01, z: -4.854045}
+  m_LocalPosition: {x: 12.3, y: 0.01, z: -21.7}
   m_LocalScale: {x: 0.6, y: 1.7, z: 0.6}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011214695550}
   - {fileID: 4000011012915164}
-  - {fileID: 4000012259276380}
+  - {fileID: 4000013737315692}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &4000013737315692
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011028496322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6, y: 0.7, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013555783750}
+  m_RootOrder: 2
 --- !u!23 &23000011773599628
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -254,12 +254,12 @@ MonoBehaviour:
   target: {fileID: 0}
   targetTag: Player
   sensingRange: 10
-  reactionTime: 0
+  reactionTime: 1
   needLineOfSight: 1
   heightOfSight: 0.95
   circleColor: {r: 1, g: 0, b: 0, a: 0.5}
-  pauseTime: 1
-  reloadTime: 0.5
+  pauseTime: 3
+  reloadTime: 1
 --- !u!114 &114000011411526368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,18 +272,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideMe: 1
---- !u!114 &114000012297337962
+--- !u!114 &114000011939169614
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014089754650}
+  m_GameObject: {fileID: 1000011028496322}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b163b32c49894277902da932b658352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 4000010761898532, guid: f0b104de49e1a403c96a15d03be6d8e0, type: 2}
+  ammo: {fileID: 4000012059172730, guid: 420e8a1fa6b3ade4b93c3522205c31b1, type: 2}
   speed: 75
   stats: {fileID: 114000012440271368}
 --- !u!114 &114000012440271368
