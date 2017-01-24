@@ -13,24 +13,17 @@ public class DamageReceiver : MonoBehaviour {
 
 	public void ReceiveDamage(StatsInfo attacker, int i) {
 		if (active && si != null) {
-           /* Debug.Log ("Attacker: " + attacker);
-			Debug.Log ("Thac0: " + attacker.THAC0);
-			Debug.Log ("AC: " + si.AC);
-			Debug.Log ("Valore atteso dado: " + i);*/
 			float probabilityHit = (20.0F - ((attacker.THAC0 - si.AC) - 1)) / 20.0F;
-			//Debug.Log("Hit: " + probabilityHit);
 			float dmg = i * probabilityHit;
-			//Debug.Log ("Danno finale: " + dmg);
 			si.HP = si.HP - dmg;
 			if (si.HP <= 0) {
                 if(si.name == "Player" || si.name == "Xenus") {
                     // ci pensa il checkpoint controller
                 } else if(si.name == "Mercenary Brute") {
-                    Debug.Log("Mercenario stordito");
                     StartCoroutine(MercenaryStun(si.gameObject));
-				} else if(si.name=="Noirah") {
-					si.HP=5;
-				}else{
+				} else if(si.name== "Noirah Nah") {
+					si.HP = 5;
+				} else {
 					Destroy(si.gameObject);
 				}
 			} 
@@ -42,7 +35,5 @@ public class DamageReceiver : MonoBehaviour {
         yield return new WaitForSeconds(5);
         si.HP = 30;
         obj.GetComponent<NPCBlaster>().active = true;
-        Debug.Log("Mecenario ripreso");
     }
-
 }

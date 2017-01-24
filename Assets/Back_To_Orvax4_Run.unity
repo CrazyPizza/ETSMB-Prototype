@@ -4039,7 +4039,7 @@ Prefab:
         type: 2}
       propertyPath: alliesList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1854839291}
     - target: {fileID: 114000012746375604, guid: 24dffc561255d954bb9090335f5fbe10,
         type: 2}
       propertyPath: toastImage
@@ -13169,7 +13169,7 @@ Transform:
   - {fileID: 1888212655}
   - {fileID: 379324620}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
 --- !u!114 &839848407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23858,7 +23858,7 @@ Transform:
   - {fileID: 26178827}
   - {fileID: 545884884}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1573758390
 GameObject:
   m_ObjectHideFlags: 0
@@ -27730,7 +27730,7 @@ Transform:
   - {fileID: 1587127424}
   - {fileID: 647072005}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
 --- !u!1 &1753823993
 GameObject:
   m_ObjectHideFlags: 0
