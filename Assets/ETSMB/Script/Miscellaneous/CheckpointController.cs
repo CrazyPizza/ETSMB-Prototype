@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CheckpointController : MonoBehaviour {
 
-	public GameObject[] enemiesList; //Lista dei nemici da popolare nell'inspector PER ORA NON SERVE
-	public Transform[] enemiesPositions; //non usata attualmente
+	public GameObject[] enemiesList; //Lista dei nemici da popolare nell'inspector
+	public Transform[] enemiesPositions; //Posizione dei nemici
 	public GameObject[] alliesList; //Lista degli alleati da popolare nell'inspector
 	public GameObject[] checkpointList; //Lista dei checkpoint, la posizione nella lista deve rispecchiare il numero del checkpoint
     public GameObject allySpecial; // Nel caso ci sia un alleato speciale come nella parte iniziale
@@ -49,19 +49,21 @@ public class CheckpointController : MonoBehaviour {
 		player.transform.position=activeCheckpointObj.transform.position;
         if (allySpecial != null) allySpecial.GetComponent<StatsInfo>().HP = allySpecialInitialHP;
 
-		//Riposizionamento di tutti gli alleati NON morti. Se sono morti sono null nel vettore e quindi li ignora
-		for(int i=0; i< alliesList.Length; i++) {
-			if(alliesList[i]!=null) {
-				alliesList[i].transform.position=new Vector3(checkP_X+offset, checkP_Y, checkP_Z+offset);
-				offset++;
-			}
-		}
-	}
+        //Riposizionamento di tutti gli alleati NON morti. Se sono morti sono null nel vettore e quindi li ignora
+        for (int i = 0; i < alliesList.Length; i++) {
+            if (alliesList[i] != null) {
+                alliesList[i].transform.position = new Vector3(checkP_X + offset, checkP_Y, checkP_Z + offset);
+                offset++;
+            }
+        }
+    }
 
     //Richiamato dai singoli checkpoint per impostare il checkpoint da cui respawnare
     public void setActiveCheckpoint(int checkpointNum) {
+
         this.activeCheckpoint = checkpointNum;
         initialHP = (int) player.GetComponentInChildren<StatsInfo>().HP;
+
         if (allySpecial != null)
             allySpecialInitialHP = (int) allySpecial.GetComponentInChildren<StatsInfo>().HP;
     }

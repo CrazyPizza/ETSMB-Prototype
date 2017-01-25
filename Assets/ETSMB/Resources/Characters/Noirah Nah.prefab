@@ -46,22 +46,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000011185481934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013290143128}
-  - 114: {fileID: 114000011491002038}
-  m_Layer: 0
-  m_Name: GrenadeLauncer
-  m_TagString: Weapon
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000011248135476
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,11 +59,27 @@ GameObject:
   - 114: {fileID: 114000010376565698}
   - 114: {fileID: 114000012215839406}
   - 114: {fileID: 114000013218786752}
-  - 114: {fileID: 114000012474576770}
+  - 114: {fileID: 114000013570847854}
   m_Layer: 0
   m_Name: Noirah Nah
   m_TagString: NPC Ally
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000012286526042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013517161664}
+  - 114: {fileID: 114000013886568960}
+  m_Layer: 0
+  m_Name: BlasterHeavy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -133,14 +133,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011248135476}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.68222904, y: 0.01, z: 3.034489}
+  m_LocalRotation: {x: -0, y: 0.999728, z: -0, w: -0.023323847}
+  m_LocalPosition: {x: 78.34243, y: 1.81, z: 73.37378}
   m_LocalScale: {x: 0.6, y: 1.7, z: 0.6}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 182.59499, z: 0}
   m_Children:
   - {fileID: 4000010198318504}
   - {fileID: 4000012650288802}
-  - {fileID: 4000013290143128}
+  - {fileID: 4000013517161664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000012650288802
@@ -156,12 +156,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000011187005560}
   m_RootOrder: 1
---- !u!4 &4000013290143128
+--- !u!4 &4000013517161664
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011185481934}
+  m_GameObject: {fileID: 1000012286526042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.6, y: 0.7, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -250,21 +250,6 @@ MonoBehaviour:
   THAC0: 11
   Bonus: 1
   showCallout: 0
---- !u!114 &114000011491002038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011185481934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf154f59f865a43c59cb2e495f4d98ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammo: {fileID: 4000010972745896, guid: 4d2068f28ad7a4699aca6edbc242aaf3, type: 2}
-  force: 10
-  angle: 30
-  stats: {fileID: 114000010376565698}
 --- !u!114 &114000011560307150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -289,28 +274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
---- !u!114 &114000012474576770
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011248135476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4cb7c27f956f4c5fbde1c58d25ab1f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  paused: 0
-  target: {fileID: 0}
-  targetTag: NPC Enemy
-  sensingRange: 10
-  reactionTime: 0
-  needLineOfSight: 1
-  heightOfSight: 0.95
-  circleColor: {r: 1, g: 0, b: 0.93103456, a: 0.5}
-  pauseTime: 2
-  reloadTime: 0.5
 --- !u!114 &114000012758644048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,7 +311,7 @@ MonoBehaviour:
   paused: 0
   target: {fileID: 0}
   targetTag: Player
-  sensingRange: 10
+  sensingRange: 7
   reactionTime: 0
   needLineOfSight: 1
   heightOfSight: 0.95
@@ -356,6 +319,42 @@ MonoBehaviour:
   goTowardTarget: 1
   speed: 4
   stopAt: 2
+--- !u!114 &114000013570847854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011248135476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716ccb1a26f4a4fc59c4bdc762a94abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  paused: 0
+  target: {fileID: 0}
+  targetTag: NPC Enemy
+  sensingRange: 7
+  reactionTime: 0
+  needLineOfSight: 1
+  heightOfSight: 0.95
+  circleColor: {r: 1, g: 0, b: 0.972414, a: 0.5}
+  pauseTime: 1
+  reloadTime: 0.5
+--- !u!114 &114000013886568960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012286526042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b163b32c49894277902da932b658352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: {fileID: 4000010743780102, guid: c75199f0de1b13f48a4593101e10dc46, type: 2}
+  speed: 75
+  stats: {fileID: 114000010376565698}
 --- !u!114 &114000013982613650
 MonoBehaviour:
   m_ObjectHideFlags: 1
