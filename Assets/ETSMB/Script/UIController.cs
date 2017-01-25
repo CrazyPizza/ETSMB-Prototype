@@ -47,9 +47,9 @@ public class UIController : MonoBehaviour {
 		contentText.text=msg;
 		//SETTA IMMAGINE DEL TOAST
 		Image contentImage=toastImage.GetComponentsInChildren<Image>()[1];
-		contentImage.sprite=Resources.Load<Sprite>("UIAssets/"+image);
-		//MOSTRA TOAST
-		toastImage.SetActive(true);
+        contentImage.sprite = Resources.Load<Sprite>("UIAssets/" + image);
+        //MOSTRA TOAST
+        toastImage.SetActive(true);
 		//CHIUDI IL TOAST TRA timeout SECONDI
 		Invoke("hideToast", timeout);
 	}
