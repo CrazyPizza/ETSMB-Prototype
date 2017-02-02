@@ -35,6 +35,9 @@ public class PlayerController : MonoBehaviour {
                 if (rb) rb.MovePosition(transform.position + Vector3.up * jumpHeight);
                 else transform.Translate(jumpHeight * Vector3.up);
 			}
+
+           
+
 		}
 	}
 }
